@@ -29,13 +29,17 @@ function SierpinksiTriangle() {
 
     const incrementDepth = () => {
         if (depth < 10) {
-            setDepth(depth + 1)
+            const newDepth = depth + 1
+            setDepth(newDepth)
+            getSvg(newDepth)
         }
     }
 
     const decrementDepth = () => {
         if (depth > 0) {
-            setDepth(depth - 1)
+            const newDepth = depth - 1
+            setDepth(newDepth)
+            getSvg(newDepth)
         }
     }
 
