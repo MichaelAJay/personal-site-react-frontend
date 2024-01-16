@@ -59,8 +59,8 @@ function SierpinksiTriangle() {
                 <button onClick={decrementDepth} disabled={depth === 0}>-</button>
                 <input type="number" value={depth} onChange={handleDepthChange} />
                 <button onClick={incrementDepth} disabled={depth === 10}>+</button>
-                <svg dangerouslySetInnerHTML={{ __html: svgData }} />
             </div>
+            <div dangerouslySetInnerHTML={{ __html: svgData }} />
         </div>
     )
 }
