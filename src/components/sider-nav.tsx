@@ -15,7 +15,7 @@ const items: MenuProps['items'] = [
     }
 ];
 
-function MainNav({ onNavigate }: { onNavigate: any }) {
+function SiderNav({ onNavigate }: { onNavigate: any }) {
     return (
         <Navigator
             onNavigate={onNavigate}
@@ -25,4 +25,4 @@ function MainNav({ onNavigate }: { onNavigate: any }) {
     )
 }
 
-export default MainNav;
+export default SiderNav;

@@ -1,10 +1,17 @@
 import { Menu, MenuProps } from "antd";
+import { ItemType, MenuItemType } from "antd/es/menu/hooks/useItems";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 type MenuMode = 'vertical' | 'horizontal' | 'inline'
 
-function Navigator({mode, items, onNavigate}: {mode: MenuMode, items: Array<any>, onNavigate: any}) {
+function Navigator({mode, items, onNavigate}:
+    {
+        mode: MenuMode,
+        items: Array<ItemType<MenuItemType>> | undefined,
+        onNavigate: any
+    }
+) {
     const [current, setCurrent] = useState('')
 
     const navigate = useNavigate();
