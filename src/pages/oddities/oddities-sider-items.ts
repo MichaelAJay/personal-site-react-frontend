@@ -1,7 +1,7 @@
 import { MenuProps } from "antd";
 
 
-export const items: MenuProps['items'] = [
+export const odditiesSiderItems: MenuProps['items'] = [
     {
         label: 'Sierpinski Triangle',
         key: 'oddities/sierpinski'
