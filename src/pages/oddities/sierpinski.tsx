@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import DOMPurify from 'dompurify';
-import { fetchSierpinskiTriangleSVG } from '../services/goServerService';
+import { fetchSierpinskiTriangleSVG } from '../../services/goServerService';
 
 function SierpinksiTriangle() {
     const [depth, setDepth] = useState<number>(0);
