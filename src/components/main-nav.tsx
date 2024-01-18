@@ -1,5 +1,6 @@
-import { HomeOutlined, RocketOutlined } from "@ant-design/icons";
+import { ContactsOutlined, HomeOutlined, RocketOutlined } from "@ant-design/icons";
 import { MenuProps } from "antd";
+import { ROUTES } from "../utils/constants/routes.constant";
 import Navigator from "./navigator";
 
 const items: MenuProps['items'] = [
@@ -10,8 +11,13 @@ const items: MenuProps['items'] = [
     },
     {
         label: 'Oddities',
-        key: 'sierpinski',
+        key: ROUTES.ODDITIES.SIERPINSKI,
         icon: <RocketOutlined />
+    },
+    {
+        label: 'Contact',
+        key: ROUTES.CONTACT,
+        icon: <ContactsOutlined />
     }
 ];
 

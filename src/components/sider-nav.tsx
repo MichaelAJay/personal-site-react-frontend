@@ -1,36 +1,21 @@
-import { HomeOutlined, RocketOutlined } from "@ant-design/icons";
 import { MenuProps } from "antd";
 import { odditiesSiderItems } from "../pages/oddities/oddities-sider-items";
 import Navigator from "./navigator";
-
-const items: MenuProps['items'] = [
-    {
-        label: 'Home',
-        key: '',
-        icon: <HomeOutlined />
-    },
-    {
-        label: 'Oddities',
-        key: 'sierpinski',
-        icon: <RocketOutlined />
-    }
-];
-
+import { Layout } from "antd";
+const { Sider } = Layout
 
 const getItems = (currentPage: string) => {
+    const pagePrefix = currentPage.split('/')[0];
+
     let items: MenuProps['items'] = [];
-    switch (currentPage) {
-        // I want to use the keys here
-        // This one should be changed because the base key of the Oddities page shouldn't be 'sierpinski'
+    switch (pagePrefix) {
         case 'oddities':
-        case 'sierpinski':
             items = odditiesSiderItems
             break;
         default:
             console.error(`Invalid currentPage ${currentPage}`)
-
-        return items;
-    }
+        }
+    return items;
 }
 
 function SiderNav({ onNavigate, currentPage }: {
@@ -38,11 +23,14 @@ function SiderNav({ onNavigate, currentPage }: {
     currentPage: string
 }) {
     return (
-        <Navigator
-            onNavigate={onNavigate}
-            mode="horizontal"
-            items={getItems(currentPage)}            
-        />
+        <Sider>
+            <Navigator
+                onNavigate={onNavigate}
+                mode="inline"
+                items={getItems(currentPage)}            
+            />
+        </Sider>
+
     )
 }
 

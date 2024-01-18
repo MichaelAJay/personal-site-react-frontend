@@ -8,10 +8,11 @@ const apiClient = axios.create({
 
 export const fetchSierpinskiTriangleSVG = async (depth: number): Promise<string> => {
     try {
-        const response = await apiClient.get('sierpinski', {
-            params: { iterations: depth }
-        });
-        return response.data;
+        // const response = await apiClient.get('sierpinski', {
+        //     params: { iterations: depth }
+        // });
+        // return response.data;
+        return '';
     } catch (err) {
         console.error('Error fetching Sierpinski Triangle data:', err)
         throw err

@@ -17,6 +17,7 @@ function Navigator({mode, items, onNavigate}:
     const navigate = useNavigate();
 
     const onClick: MenuProps['onClick'] = (e) => {
+        console.log(items, e.key)
         setCurrent(e.key);
         navigate(`/${e.key}`);
         onNavigate(e.key)

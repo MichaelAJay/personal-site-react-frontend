@@ -3,3 +3,4 @@ function OtherOddity() {
         <div>Mysterious Oddity #2</div>
     )
 }
+export default OtherOddity
