@@ -9,12 +9,13 @@ import { ROUTES } from './utils/constants/routes.constant';
 import SiderNav from './components/sider-nav';
 import OtherOddity from './pages/oddities/other-oddity';
 import ContactForm from './pages/contact/contact-form';
+import { isSiderVisible } from './utils/functions/is-sider-visible.function';
 const { Header, Content } = Layout
 
 function App() {
   const [currentPage, setCurrentPage] = useState('')
 
-  
+
 
   return (
     <Router>
@@ -26,7 +27,7 @@ function App() {
           <MainNav onNavigate={setCurrentPage} />
         </Header>
         <Layout>
-          {currentPage !== '' &&
+          {isSiderVisible(currentPage) &&
             <SiderNav
               onNavigate={setCurrentPage}
               currentPage={currentPage}
