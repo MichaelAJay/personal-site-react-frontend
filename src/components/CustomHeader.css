@@ -1,9 +1,9 @@
 .Header {
-    background-color: var(--treedarkgreen);
+    /* background-color: transparent; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    /* padding: 16px; */
 }
 
 .Header-logo {
@@ -11,10 +11,10 @@
 }
 
 .Header-login {
-    background-color: var(--lightgreen);
+    /* background-color: transparent; */
     border: none;
-    color: var(--backgroundwhite);
-    padding: 8px 16px;
+    /* color: var(--backgroundwhite); */
+    /* padding: 8px 16px; */
     cursor: pointer
 }
 

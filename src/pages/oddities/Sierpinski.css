@@ -1,0 +1,25 @@
+.Sierpinski-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.Sierpinski-input-number {
+    margin-bottom: 20px;
+}
+
+.Sierpinski-triangle-viewer {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+}
+
+.Sierpinski-triangle-viewer svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 10px;
+}

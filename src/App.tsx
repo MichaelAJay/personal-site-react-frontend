@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SierpinksiTriangle from './pages/oddities/sierpinski';
+import SierpinksiTriangle from './pages/oddities/Sierpinski';
 import { Layout } from 'antd';
 import Home from './pages/home/home';
 import { ROUTES } from './utils/constants/routes.constant';
 import SiderNav from './components/SiderNav';
 import OtherOddity from './pages/oddities/other-oddity';
-import ContactForm from './pages/contact/contact-form';
+import ContactForm from './pages/contact/ContactForm';
 import { isSiderVisible } from './utils/functions/is-sider-visible.function';
 import Login from './pages/auth/login';
 import MessageViewer from './pages/admin/MessageViewer';
@@ -20,7 +20,8 @@ function App() {
 
   return (
     <Router>
-      <Layout style={{ background: 'transparent' }}>
+      {/* <Layout style={{ background: 'transparent' }}> */}
+      <Layout className='App-layout'>
         <CustomHeader
           onNavigate={setCurrentPage}
         />
@@ -32,7 +33,8 @@ function App() {
             />          
           }
 
-          <Layout style={{ padding: '0 24px 24px', background: 'transparent' }}>
+          {/* <Layout style={{ padding: '0 24px 24px', background: 'transparent' }}> */}
+          <Layout className='App-layout-content'>
             <Content>
                 <div>
                   <Routes>

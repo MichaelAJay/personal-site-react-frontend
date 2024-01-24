@@ -1,3 +1,4 @@
+import './Navigator.css'
 import { Menu, MenuProps } from "antd";
 import { ItemType, MenuItemType } from "antd/es/menu/hooks/useItems";
 import { useState } from "react";
@@ -42,6 +43,7 @@ function Navigator({mode, items, onNavigate}:
 
     return (
         <Menu
+            className="custom-nav"
             onClick={onClick}
             selectedKeys={[current]}
             mode={mode}

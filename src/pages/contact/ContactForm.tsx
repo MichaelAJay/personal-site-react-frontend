@@ -1,6 +1,7 @@
 import { Button, Form, FormInstance, Input } from "antd";
 import { PostContactForm } from "../../services/api/goServer/request/post-contact-form";
 import { postContactForm } from "../../services/goServerService";
+import './ContactForm.css'
 
 const MAX_MESSAGE_CHARS = 100
 
@@ -18,6 +19,7 @@ function ContactForm() {
 
     return (
         <Form
+            className='contact-form-container'
             form={form}
             name="contact"
             onFinish={onFinish}

@@ -46,3 +46,14 @@
   --darksand: #aba58e;
   --rockbrown: #6e7170;
 }
+
+.App-layout {
+  min-height: 100vh;
+}
+
+.App-layout-content {
+  /* for some reason, when the two properties below are used, it throws off the other content */
+  /* align-items: center;
+  justify-content: center; */
+  padding: 10px
+}
