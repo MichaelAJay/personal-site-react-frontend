@@ -1,25 +1,22 @@
 import { Button, Form, FormInstance, Input } from "antd";
-import { PostContactForm } from "../../services/api/goServer/request/post-contact-form";
-import { postContactForm } from "../../services/goServerService";
+import { SignupForm } from "../../services/api/goServer/request/signup-form";
+import { signUp } from "../../services/goServerService";
 
-const MAX_MESSAGE_CHARS = 100
-
-function ContactForm() {
-    const [form]: Array<FormInstance<PostContactForm>> = Form.useForm();
+function Signup() {
+    const [form]: Array<FormInstance<SignupForm>> = Form.useForm();
 
     const onFinish = async (values: any) => {
         try {
-            await postContactForm(values);
+            await signUp(values);
         } catch (err) {
-            console.error('Error posting contact form', err);
-
+            console.error('Error posting signup form', err);
         }
     }
 
     return (
         <Form
             form={form}
-            name="contact"
+            name="sign-up"
             onFinish={onFinish}
         >
             <Form.Item
@@ -55,16 +52,20 @@ function ContactForm() {
                 <Input />
             </Form.Item>
             <Form.Item
-                name="message"
-                label="Leave a message!"
+                name="password"
+                label="Password"
                 rules={[
                     {
+                        type: 'string',
+                        message: 'String email'
+                    },
+                    {
                         required: true,
-                        message: 'Enter a message and I\'ll be in contact'
+                        message: 'Please input your password.'
                     }
                 ]}
             >
-                <Input.TextArea showCount maxLength={MAX_MESSAGE_CHARS} />
+                <Input />
             </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit">
@@ -75,4 +76,4 @@ function ContactForm() {
     )
 }
 
-export default ContactForm;
+export default Signup;

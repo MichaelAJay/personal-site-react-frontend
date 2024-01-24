@@ -1,4 +1,4 @@
-import { ContactsOutlined, HomeOutlined, RocketOutlined } from "@ant-design/icons";
+import { ContactsOutlined, EyeOutlined, HomeOutlined, RocketOutlined } from "@ant-design/icons";
 import { MenuProps } from "antd";
 import { ROUTES } from "../utils/constants/routes.constant";
 import Navigator from "./navigator";
@@ -18,6 +18,11 @@ const items: MenuProps['items'] = [
         label: 'Contact',
         key: ROUTES.CONTACT,
         icon: <ContactsOutlined />
+    },
+    {
+        label: 'Admin',
+        key: ROUTES.ADMIN.MESSAGES,
+        icon: <EyeOutlined />
     }
 ];
 

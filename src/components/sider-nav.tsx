@@ -2,6 +2,7 @@ import { MenuProps } from "antd";
 import { odditiesSiderItems } from "../pages/oddities/oddities-sider-items";
 import Navigator from "./navigator";
 import { Layout } from "antd";
+import { adminSiderItems } from "../pages/admin/admin-sider-items";
 const { Sider } = Layout
 
 const getItems = (currentPage: string) => {
@@ -11,6 +12,9 @@ const getItems = (currentPage: string) => {
     switch (pagePrefix) {
         case 'oddities':
             items = odditiesSiderItems
+            break;
+        case 'admin':
+            items = adminSiderItems
             break;
         default:
             console.error(`Invalid currentPage ${currentPage}`)

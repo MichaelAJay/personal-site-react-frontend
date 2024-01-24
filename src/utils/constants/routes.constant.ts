@@ -4,5 +4,12 @@ export const ROUTES = {
         SIERPINSKI: 'oddities/sierpinski',
         OTHER: 'oddities/other'
     },
-    CONTACT: 'contact'
+    CONTACT: 'contact',
+    ADMIN: {
+        MESSAGES: 'admin/messages'
+    },
+    AUTH: {
+        LOGIN: 'login',
+        SIGNUP: 'sign-up'
+    }
 }

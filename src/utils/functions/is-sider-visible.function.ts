@@ -1,5 +1,6 @@
 const ROUTE_PREFIXES_WITH_SIDER = new Set([
-    'oddities'
+    'oddities',
+    'admin'
 ])
 
 export function isSiderVisible(currentPage: string): boolean {
