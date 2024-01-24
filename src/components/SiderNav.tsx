@@ -1,6 +1,6 @@
 import { MenuProps } from "antd";
 import { odditiesSiderItems } from "../pages/oddities/oddities-sider-items";
-import Navigator from "./navigator";
+import Navigator from "./Navigator";
 import { Layout } from "antd";
 import { adminSiderItems } from "../pages/admin/admin-sider-items";
 const { Sider } = Layout

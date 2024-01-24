@@ -1,6 +1,6 @@
 import { Table } from "antd";
 import { useEffect, useState } from "react";
-import CustomModal from "../../components/custom-modal";
+import CustomModal from "../../components/CustomModal";
 import { getMessage, getMessages } from "../../services/goServerService";
 
 interface Message {

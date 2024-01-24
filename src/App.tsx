@@ -5,13 +5,13 @@ import SierpinksiTriangle from './pages/oddities/sierpinski';
 import { Layout } from 'antd';
 import Home from './pages/home/home';
 import { ROUTES } from './utils/constants/routes.constant';
-import SiderNav from './components/sider-nav';
+import SiderNav from './components/SiderNav';
 import OtherOddity from './pages/oddities/other-oddity';
 import ContactForm from './pages/contact/contact-form';
 import { isSiderVisible } from './utils/functions/is-sider-visible.function';
 import Login from './pages/auth/login';
-import MessageViewer from './pages/admin/message-viewer';
-import CustomHeader from './components/custom-header';
+import MessageViewer from './pages/admin/MessageViewer';
+import CustomHeader from './components/CustomHeader';
 import Signup from './pages/auth/signup';
 const { Content } = Layout
 

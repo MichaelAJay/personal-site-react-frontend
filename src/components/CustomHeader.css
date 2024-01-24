@@ -1,0 +1,23 @@
+.Header {
+    background-color: var(--treedarkgreen);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.Header-logo {
+    height: 62px;
+}
+
+.Header-login {
+    background-color: var(--lightgreen);
+    border: none;
+    color: var(--backgroundwhite);
+    padding: 8px 16px;
+    cursor: pointer
+}
+
+.Header-login:hover {
+    background-color: var(--darkgreen);
+}

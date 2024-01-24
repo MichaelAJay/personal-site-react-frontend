@@ -1,7 +1,7 @@
 import { ContactsOutlined, EyeOutlined, HomeOutlined, RocketOutlined } from "@ant-design/icons";
 import { MenuProps } from "antd";
 import { ROUTES } from "../utils/constants/routes.constant";
-import Navigator from "./navigator";
+import Navigator from './Navigator'
 
 const items: MenuProps['items'] = [
     {

@@ -1,7 +1,7 @@
 import { Button } from "antd"
 import { Header } from "antd/es/layout/layout"
 import { useNavigate } from "react-router-dom";
-import MainNav from "./main-nav"
+import MainNav from "./MainNav"
 
 function CustomHeader({ onNavigate }: { onNavigate: any }) {
   const navigate = useNavigate();
