@@ -1,8 +1,9 @@
-import './Navigator.css'
 import { Menu, MenuProps } from "antd";
 import { ItemType, MenuItemType } from "antd/es/menu/hooks/useItems";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { colorAliases } from "..";
+import './Navigator.css'
 
 type MenuMode = 'vertical' | 'horizontal' | 'inline'
 
@@ -28,7 +29,7 @@ function Navigator({mode, items, onNavigate}:
         let style: Record<string, any>;
         switch (mode) {
             case 'horizontal':
-                style = { flex: 1, minWidth: 0 };
+                style = { flex: 1, minWidth: 0, color: colorAliases.darkGreen};
                 break;
             case 'vertical':    
             case 'inline':
@@ -43,7 +44,7 @@ function Navigator({mode, items, onNavigate}:
 
     return (
         <Menu
-            className="custom-nav"
+            className={ mode === 'horizontal' ? 'main-nav' : 'sider-nav' }
             onClick={onClick}
             selectedKeys={[current]}
             mode={mode}

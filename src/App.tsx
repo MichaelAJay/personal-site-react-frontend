@@ -20,7 +20,6 @@ function App() {
 
   return (
     <Router>
-      {/* <Layout style={{ background: 'transparent' }}> */}
       <Layout className='App-layout'>
         <CustomHeader
           onNavigate={setCurrentPage}
@@ -33,7 +32,6 @@ function App() {
             />          
           }
 
-          {/* <Layout style={{ padding: '0 24px 24px', background: 'transparent' }}> */}
           <Layout className='App-layout-content'>
             <Content>
                 <div>

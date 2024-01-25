@@ -13,11 +13,13 @@ function CustomHeader({ onNavigate }: { onNavigate: any }) {
 
     return (
         <Header className='Header'>
+        {/* <Header> */}
           <div className='Header-logo'>
             <img src="/logo.png" alt="Logo - A mountain with a tree which suggests recursion" style={{ height: '62px' }}/>
           </div>
           <MainNav onNavigate={onNavigate} />
-          <Button className='Header-login' onClick={handleLoginClick}>Login</Button>
+          {/* <Button className='Header-login' onClick={handleLoginClick}>Login</Button> */}
+          <Button onClick={handleLoginClick}>Login</Button>
         </Header>
     )
 }

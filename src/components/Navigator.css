@@ -1,14 +1,19 @@
-.custom-nav .ant-menu-horizontal {
-    background-color: var(--treedarkgreen); /* !important to override Ant styles */
-    border-bottom: none;
+.main-nav {
+    color: var(--darkgreen);
+    background-color: var(--lightgreen);
 }
 
-.custom-nav .ant-menu-item {
-    color: var(--lightgreen);
-}
-
-.custom-nav .ant-menu-item-selected,
-.custom-nav .ant-menu-item:hover {
-    color: var(--backgroundwhite);
+.sider-nav {
+    color: var(--mountainlight);
     background-color: var(--darkgreen);
+}
+
+.main-nav .ant-menu-item:hover {
+    color: var(--mountainlight) !important;
+    background-color: var(--darkgreen) !important;
+}
+
+.sider-nav .ant-menu-item:hover {
+    color: var(--darkgreen) !important;
+    background-color: var(--lightgreen) !important;
 }

@@ -39,12 +39,14 @@
 
 :root {
   --treedarkgreen: #31474f;
-  --backgroundwhite: #27210d;
   --lightgreen: #a2b4a9;
   --darkgreen: #32454c;
   --sandbrown: #a8a58c;
   --darksand: #aba58e;
   --rockbrown: #6e7170;
+  --mountainlight: #fffbed;
+  --testRed: #ff0000;
+  --testBlue: #00f;
 }
 
 .App-layout {

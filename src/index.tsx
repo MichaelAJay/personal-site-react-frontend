@@ -5,32 +5,51 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ConfigProvider } from 'antd';
 
+export const colorAliases = {
+  treeDarkGreen: '#31474f',
+  lightGreen: '#a2b4a9',
+  darkGreen: '#32454c',
+  sandBrown: '#a8a58c',
+  darkSand: '#aba58e',
+  rockBrown: '#6e7170',
+  mountainLight: '#fffbed',
+}
+
 const colors = {
-  primaryBackground: '#fcf6e6',
+  primaryBackground: '#fffbed',
+  secondaryBackground: '#a2b4a9',
   redTest: '#ff0000',
+  blueTest: '#0000ff',
   primary: '#31474f',
   primaryText: '#a2b4a9',
-  buttonText: '#a2b4a9'
+  buttonText: '#a2b4a9',
+  transparent: '#00000000'
 }
 
 const theme = {
   token: {
     colorPrimary: colors.primary,
-    colorText: colors.primaryText,
+    colorText: colorAliases.darkGreen,
     colorBgContainer: colors.primaryBackground
     // colorBgContainer changes the background color of the nav bar
   },
   components: {
     Layout: {
       // header
-      headerBg: colors.primaryBackground,
+      headerBg: colors.secondaryBackground,
       headerPadding: '20px 50px 20px',
       // body
-      bodyBg: colors.primaryBackground // This handles the layout's content section background color
+      bodyBg: colors.primaryBackground, // This handles the layout's content section background color
+      // sider
+      siderBg: colorAliases.darkGreen
     },
     Button: {
       defaultBg: colors.primary,
       defaultColor: colors.buttonText
+    },
+    Menu: {
+      itemColor: colorAliases.mountainLight,
+      itemBg: colors.transparent
     }
   }
 }

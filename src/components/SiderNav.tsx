@@ -33,6 +33,7 @@ function SiderNav({ onNavigate, currentPage }: {
                 mode="inline"
                 items={getItems(currentPage)}            
             />
+            {/* Sider text */}
         </Sider>
 
     )
