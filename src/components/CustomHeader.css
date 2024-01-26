@@ -1,4 +1,4 @@
-.Header {
+.header {
     /* background-color: transparent; */
     display: flex;
     align-items: center;
@@ -6,16 +6,26 @@
     /* padding: 16px; */
 }
 
-.Header-logo {
-    height: 62px;
+.header-logo-container {
+    height: 64px;
+    display: flex;
+    align-items: center;
 }
 
-.Header-login {
+.header-logo {
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.header-login {
     /* background-color: transparent; */
     border: none;
     /* color: var(--backgroundwhite); */
     /* padding: 8px 16px; */
-    cursor: pointer
+    cursor: pointer;
+    margin: 0 16px 0 0;
 }
 
 .Header-login:hover {

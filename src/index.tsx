@@ -16,13 +16,14 @@ export const colorAliases = {
 }
 
 const colors = {
-  primaryBackground: '#fffbed',
+  primaryBackground: colorAliases.mountainLight,
   secondaryBackground: '#a2b4a9',
   redTest: '#ff0000',
   blueTest: '#0000ff',
   primary: '#31474f',
   primaryText: '#a2b4a9',
   buttonText: '#a2b4a9',
+  contentBorder: colorAliases.rockBrown,
   transparent: '#00000000'
 }
 
@@ -37,9 +38,11 @@ const theme = {
     Layout: {
       // header
       headerBg: colors.secondaryBackground,
-      headerPadding: '20px 50px 20px',
+      headerPadding: '10px 0',
       // body
-      bodyBg: colors.primaryBackground, // This handles the layout's content section background color
+      // bodyBg: colors.primaryBackground, // This handles the layout's content section background color
+      // bodyBg: colors.redTest,
+      bodyBg: colors.contentBorder,
       // sider
       siderBg: colorAliases.darkGreen
     },

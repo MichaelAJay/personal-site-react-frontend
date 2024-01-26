@@ -1,0 +1,26 @@
+/* .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 84px); 64px from Header and 10 px top and bottom from Content
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+} */
+
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    width: 100%;
+    height: calc(100vh - 84px); /* Adjusted for the header height */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 10px; /* Add padding if necessary */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    position: relative;
+  }
+  

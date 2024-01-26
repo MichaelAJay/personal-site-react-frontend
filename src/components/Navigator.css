@@ -1,6 +1,12 @@
 .main-nav {
     color: var(--darkgreen);
     background-color: var(--lightgreen);
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sider-nav {

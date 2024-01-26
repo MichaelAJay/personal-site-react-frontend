@@ -9,10 +9,11 @@ const apiClient = axios.create({
     // withCredentials: true
 })
 
-export const fetchSierpinskiTriangleSVG = async (depth: number): Promise<string> => {
+export const fetchSierpinskiTriangleSVG = async (depth: number, color: string): Promise<string> => {
     try {
+        console.log('color', color);
         const response = await apiClient.get('sierpinski', {
-            params: { iterations: depth }
+            params: { iterations: depth, color }
         });
         return response.data;
     } catch (err) {

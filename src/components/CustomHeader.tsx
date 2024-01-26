@@ -12,14 +12,17 @@ function CustomHeader({ onNavigate }: { onNavigate: any }) {
   }
 
     return (
-        <Header className='Header'>
+        <Header className='header'>
         {/* <Header> */}
-          <div className='Header-logo'>
-            <img src="/logo.png" alt="Logo - A mountain with a tree which suggests recursion" style={{ height: '62px' }}/>
+          <div className='header-logo-container'>
+            <img className='header-logo' src="/app-logo-400w.png" alt="Logo - A mountain with a tree which suggests recursion"/>
           </div>
+          {/* <Image
+            src="/app-logo-400w.png"
+            // width={600}
+          /> */}
           <MainNav onNavigate={onNavigate} />
-          {/* <Button className='Header-login' onClick={handleLoginClick}>Login</Button> */}
-          <Button onClick={handleLoginClick}>Login</Button>
+          <Button className='header-login' onClick={handleLoginClick}>Login</Button>
         </Header>
     )
 }
