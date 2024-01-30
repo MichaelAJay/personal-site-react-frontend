@@ -57,12 +57,12 @@
   /* for some reason, when the two properties below are used, it throws off the other content */
   /* align-items: center;
   justify-content: center; */
-  padding: 10px;
-  /* background-color: var(--testBlue); */
+  /* padding: 10px; */
+  background-color: var(--testBlue);
 }
 
 .app-content {
   background-color: var(--mountainlight);
   border-radius: 10px;
-  padding: 10px;
+  /* padding: 10px; */
 }

@@ -4,6 +4,24 @@
 
 .home-image {
     width: 100%;
-    max-width: 100%;
     height: auto;
+    object-fit: cover;
+    /* position: absolute; */
+    top: 0;
+    z-index: 1;
+    display: block;
+}
+
+.home-proficiencies-bar {
+   /* position: absolute; */
+   /* bottom: 0; */
+   width: 100%;
+   /* aspect-ratio: 2 / 1; */
+   /* height: 50%; */
+   /* display: flex;
+   justify-content: space-between; */
+   z-index: 2;
+   background-color: var(--testRed);
+   padding-top: 10px; /* padding-top and bottom are doing what's expected */
+   padding-bottom: 10px;
 }

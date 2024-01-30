@@ -1,0 +1,9 @@
+.home-skill-card {
+    width: calc(100vw / 5)
+}
+
+.home-skill-card-meta .ant-card-meta-title {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
