@@ -5,6 +5,8 @@ import { ContinuousLearnerCard, CraftsmanshipCard, DedicationCard, LifecycleCard
 import './Home.css';
 import HomeSkillCard from './HomeSkillCard';
 import HomeSkillSection from './HomeSkillSection';
+import { ContinuousLearnerContent, CraftsmanshipContent, DedicationContent, LifecycleContent } from './skill-content';
+// import LifecycleContent from './LifecycleContent';
 
 function Home() {
     return (
@@ -22,34 +24,26 @@ function Home() {
                     <HomeSkillCard content={DedicationCard} />
                     <HomeSkillCard content={ContinuousLearnerCard} />
                 </Row>
-                {/* <div id={LifecycleCard.sectionId} className="section-red">SDLC Section</div>
-                <div id={CraftsmanshipCard.sectionId} className="section-blue">Craftsmanship Section</div>
-                <div id={DedicationCard.sectionId} className="section-red">Dedication Section</div>
-                <div id={ContinuousLearnerCard.sectionId} className="section-blue">Continuous Learner Section</div> */}
-                <HomeSkillSection
-                    id={LifecycleCard.sectionId}
-                    img={{ isLeft: true,  alt: 'Alt lifecycle card section image', src: '/project-lifecycle-expertise-section-image.png' }}
-                >
-                    <div className='section-red'>SDLC Section</div>
-                </HomeSkillSection>
-                <HomeSkillSection
-                    id={CraftsmanshipCard.sectionId}
-                    img={{ isLeft: false,  alt: 'Alt craftsmanship card section image', src: '/code-craftsmanship-section-image.png' }}
-                >
-                    <div className='section-red'>Craftsmanship Section</div>
-                </HomeSkillSection>
-                <HomeSkillSection
-                    id={DedicationCard.sectionId}
-                    img={{ isLeft: true,  alt: 'Alt Dedication section image', src: '/dedication-section-image.png' }}
-                >
-                    <div className='section-red'>Dedication Section</div>
-                </HomeSkillSection>
-                <HomeSkillSection
-                    id={ContinuousLearnerCard.sectionId}
-                    img={{ isLeft: false,  alt: 'Alt Continuous Learner card section image', src: '/continuous-learner-section-image.png' }}
-                >
-                    <div className='section-red'>Continuous Learner Section</div>
-                </HomeSkillSection>
+            <HomeSkillSection
+                id={LifecycleCard.sectionId}
+                img={{ isLeft: true,  alt: 'Alt lifecycle card section image', src: '/project-lifecycle-expertise-section-image.png' }}
+                content={LifecycleContent}
+            />
+            <HomeSkillSection
+                id={CraftsmanshipCard.sectionId}
+                img={{ isLeft: false,  alt: 'Alt craftsmanship card section image', src: '/code-craftsmanship-section-image.png' }}
+                content={CraftsmanshipContent}
+            />
+            <HomeSkillSection
+                id={DedicationCard.sectionId}
+                img={{ isLeft: true,  alt: 'Alt Dedication section image', src: '/dedication-section-image.png' }}
+                content={DedicationContent}
+            />
+            <HomeSkillSection
+                id={ContinuousLearnerCard.sectionId}
+                img={{ isLeft: false,  alt: 'Alt Continuous Learner card section image', src: '/continuous-learner-section-image.png' }}
+                content={ContinuousLearnerContent}
+            />
             </Hero>
         </>
     )

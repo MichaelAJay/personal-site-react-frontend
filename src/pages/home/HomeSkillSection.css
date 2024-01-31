@@ -1,5 +1,10 @@
+.flex-container {
+    background-color: var(--sandbrown);
+    padding: 20px;
+}
+
 .home-skill-img-left, .home-skill-img-right {
-    background-color: var(--testBlue);
+    /* background-color: var(--testBlue); */
     object-fit: contain;
     padding: 20px;
     box-sizing: border-box;
@@ -11,12 +16,12 @@
 }
 
 .home-skill-img-left, .home-skill-img-right img {
-    max-width: 100%;
-    height: auto;
+    /* max-width: 100%;
+    height: auto; */
+    width: 33%;
     object-fit: contain;
 }
 
 .home-skill-content-left, .home-skill-content-right {
-    background-color: var(--testBlue);
-    flex: 2;
+    flex: 1;
 }

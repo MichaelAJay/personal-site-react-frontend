@@ -1,5 +1,6 @@
 import { Flex } from "antd";
 import './HomeSkillSection.css';
+import HomeSkillSectionContent, { HomeSkillSectionContentArgs } from "./HomeSkillSectionContent";
 
 type HomeSkillSectionArgs = {
     id: string;
@@ -8,35 +9,36 @@ type HomeSkillSectionArgs = {
         alt: string;
         src: string;
     }
-    children: any;
+    content: HomeSkillSectionContentArgs;
 }
 
 function HomeSkillSection(args: HomeSkillSectionArgs) {
-
-
     return (
-        <Flex id={args.id} align='flex-start'>
-            {args.img.isLeft &&
-
-                    <img className='home-skill-img-left'
-                        alt={args.img.alt}
-                        src={args.img.src}
-                    />
+        <div className="flex-container">
+            <Flex id={args.id} align='center'>
+                {args.img.isLeft &&
                 
-            }
-            <div className={`home-skill-content-${args.img.isLeft ? 'right' : 'left'}`}>
-                { args.children }
-            </div>
-            {!args.img.isLeft &&
-                
-                    <img
-                        className='home-skill-img-right'
-                        alt={args.img.alt}
-                        src={args.img.src}
-                    />
-                
-            }
-        </Flex>
+                        <img className='home-skill-img-left'
+                            alt={args.img.alt}
+                            src={args.img.src}
+                        />
+                    
+                }
+                <div className={`home-skill-content-${args.img.isLeft ? 'right' : 'left'}`}>
+                    {/* { args.children } */}
+                    <HomeSkillSectionContent {...args.content} />
+                </div>
+                {!args.img.isLeft &&
+                    
+                        <img
+                            className='home-skill-img-right'
+                            alt={args.img.alt}
+                            src={args.img.src}
+                        />
+                    
+                }
+            </Flex>
+        </div>
     )
 }
 
