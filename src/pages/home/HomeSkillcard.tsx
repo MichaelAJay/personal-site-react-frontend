@@ -1,9 +1,9 @@
-import './HomeSkillcard.css'
+import './HomeSkillCard.css'
 import { Card } from "antd";
 import { HomeSkillCardContent } from "./card-content";
 const { Meta } = Card;
 
-function HomeSkillcard(
+function HomeSkillCard(
     { content }: { 
         content: HomeSkillCardContent;
     }
@@ -31,4 +31,4 @@ function HomeSkillcard(
     )
 }
 
-export default HomeSkillcard;
+export default HomeSkillCard;

@@ -1,0 +1,22 @@
+.home-skill-img-left, .home-skill-img-right {
+    background-color: var(--testBlue);
+    object-fit: contain;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 33%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-skill-img-left, .home-skill-img-right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.home-skill-content-left, .home-skill-content-right {
+    background-color: var(--testBlue);
+    flex: 2;
+}
