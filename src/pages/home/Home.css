@@ -21,7 +21,17 @@
    /* display: flex;
    justify-content: space-between; */
    z-index: 2;
-   background-color: var(--testRed);
-   padding-top: 10px; /* padding-top and bottom are doing what's expected */
-   padding-bottom: 10px;
+   background-color: var(--lightgreen);
+   padding: 20px 40px;
+}
+
+.section-red {
+    height: 500px;
+    background-color: var(--testRed);
+    scroll-margin-top: 64px;
+}
+
+.section-blue {
+    height: 500px;
+    background-color: var(--testBlue);
 }

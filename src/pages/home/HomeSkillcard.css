@@ -6,4 +6,5 @@
     overflow: visible;
     text-overflow: clip;
     white-space: normal;
+    text-align: center;
 }

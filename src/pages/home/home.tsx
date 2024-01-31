@@ -1,46 +1,32 @@
 
-import { Card, Row, Typography } from 'antd';
+import { Row } from 'antd';
 import Hero from '../../components/Hero';
-import { LifecycleCard } from './card-content';
+import { ContinuousLearnerCard, CraftsmanshipCard, DedicationCard, LifecycleCard } from './card-content';
 import './Home.css';
-import './Skillcard.css';
-const { Meta } = Card;
+import HomeSkillcard from './HomeSkillcard';
 
 function Home() {
     return (
-        <Hero>
-            <div>
-                <img className="home-image" src="/home-hero.png" alt="Surreal mountains scene" />
-            </div>
-            <Row
-                className="home-proficiencies-bar"
-                justify={'space-evenly'}
-            >
-                <Card
-                    className='home-skill-card'
-                    cover={<img alt="Triangle with tree logo" src="/bw-triangle-with-tree.png" />}
+        <>
+            <Hero>
+                <div>
+                    <img className="home-image" src="/home-hero.png" alt="Surreal mountains scene" />
+                </div>
+                <Row
+                    className="home-proficiencies-bar"
+                    justify={'space-around'}
                 >
-                    <Meta
-                        className='home-skill-card-meta'
-                        title={LifecycleCard.title}
-                        description={LifecycleCard.description}
-                    />
-                </Card>
-                <Card title="My second skill" className='home-skill-card'>
-                    <Typography>Line 1</Typography>
-                    <Typography>Line 2</Typography>
-                </Card>
-                <Card title="My third skill" className='home-skill-card'>
-                    <Typography>Line 1</Typography>
-                    <Typography>Line 2</Typography>
-                </Card>
-                <Card title="My fourth skill" className='home-skill-card'>
-                    <Typography>Line 1</Typography>
-                    <Typography>Line 2</Typography>
-                </Card>
-            </Row>
-        </Hero>
-
+                    <HomeSkillcard content={LifecycleCard} />
+                    <HomeSkillcard content={CraftsmanshipCard} />
+                    <HomeSkillcard content={DedicationCard} />
+                    <HomeSkillcard content={ContinuousLearnerCard} />
+                </Row>
+                <div id={LifecycleCard.sectionId} className="section-red">SDLC Section</div>
+                <div id={CraftsmanshipCard.sectionId} className="section-blue">Craftsmanship Section</div>
+                <div id={DedicationCard.sectionId} className="section-red">Dedication Section</div>
+                <div id={ContinuousLearnerCard.sectionId} className="section-blue">Continuous Learner Section</div>
+            </Hero>
+        </>
     )
 }
 

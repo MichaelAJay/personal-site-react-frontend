@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SierpinksiTriangle from './pages/oddities/Sierpinski';
-import { Layout } from 'antd';
+import { Affix, Layout } from 'antd';
 import { ROUTES } from './utils/constants/routes.constant';
 import SiderNav from './components/SiderNav';
 import OtherOddity from './pages/oddities/other-oddity';
@@ -22,9 +22,11 @@ function App() {
   return (
     <Router>
       <Layout className='App-layout'>
-        <CustomHeader
-          onNavigate={setCurrentPage}
-        />
+        <Affix>
+          <CustomHeader
+            onNavigate={setCurrentPage}
+          />
+        </Affix>
         <Layout>          
           <SiderNav
             onNavigate={setCurrentPage}

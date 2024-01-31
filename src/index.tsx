@@ -17,12 +17,12 @@ export const colorAliases = {
 
 const colors = {
   primaryBackground: colorAliases.mountainLight,
-  secondaryBackground: '#a2b4a9',
+  secondaryBackground: colorAliases.lightGreen,
   redTest: '#ff0000',
   blueTest: '#0000ff',
   primary: '#31474f',
-  primaryText: '#a2b4a9',
-  buttonText: '#a2b4a9',
+  primaryText: colorAliases.lightGreen,
+  buttonText: colorAliases.lightGreen,
   contentBorder: colorAliases.rockBrown,
   transparent: '#00000000'
 }
