@@ -1,34 +1,28 @@
 import './HomeSkillCard.css'
 import { Card } from "antd";
 import { HomeSkillCardContent } from "./card-content";
+import useVerticalScrollToSection from '../../hooks/vertical-scroll-to-section';
 const { Meta } = Card;
 
 function HomeSkillCard(
-    { content }: { 
-        content: HomeSkillCardContent;
-    }
+    props : HomeSkillCardContent
 ) {
+    const handleClick = useVerticalScrollToSection(props.sectionId, -84);
+
     return (
         <Card
             className='home-skill-card'
-            onClick={() => {
-                const section = document.getElementById(content.sectionId)
-                if (section) {
-                    // section.scrollIntoView({ behavior: 'smooth' });
-                    const yOffset = -84;
-                    const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
-                    window.scrollTo({ top: y, behavior: 'smooth' })
-                }
-            }}
-            cover={<img alt={content.imgAlt} src={content.imgSrc} />}
+            onClick={handleClick}
+            cover={<img alt={props.imgAlt} src={props.imgSrc} />}
         >
             <Meta
                 className='home-skill-card-meta'
-                title={content.title}
-                description={content.description}
+                title={props.title}
+                description={props.description}
             />
         </Card>
     )
 }
 
+// export default verticalScrollToSectionHOC(HomeSkillCard);
 export default HomeSkillCard;

@@ -6,7 +6,6 @@ import './Home.css';
 import HomeSkillCard from './HomeSkillCard';
 import HomeSkillSection from './HomeSkillSection';
 import { ContinuousLearnerContent, CraftsmanshipContent, DedicationContent, LifecycleContent } from './skill-content';
-// import LifecycleContent from './LifecycleContent';
 
 function Home() {
     return (
@@ -19,10 +18,10 @@ function Home() {
                     className="home-proficiencies-bar"
                     justify={'space-around'}
                 >
-                    <HomeSkillCard content={LifecycleCard} />
-                    <HomeSkillCard content={CraftsmanshipCard} />
-                    <HomeSkillCard content={DedicationCard} />
-                    <HomeSkillCard content={ContinuousLearnerCard} />
+                    <HomeSkillCard {...LifecycleCard} />
+                    <HomeSkillCard {...CraftsmanshipCard} />
+                    <HomeSkillCard {...DedicationCard} />
+                    <HomeSkillCard {...ContinuousLearnerCard} />
                 </Row>
             <HomeSkillSection
                 id={LifecycleCard.sectionId}
