@@ -1,5 +1,10 @@
 .flex-container {
-    background-color: var(--sandbrown);
+    background-color: var(--lightoceanblue);
+    padding: 20px;
+}
+
+.flex-container-lite {
+    background-color: var(--lightoceanbluelite);
     padding: 20px;
 }
 

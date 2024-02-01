@@ -14,7 +14,7 @@ type HomeSkillSectionArgs = {
 
 function HomeSkillSection(args: HomeSkillSectionArgs) {
     return (
-        <div className="flex-container">
+        <div className={`flex-container${args.img.isLeft ? '' : '-lite'}`}>
             <Flex id={args.id} align='center'>
                 {args.img.isLeft &&
                 

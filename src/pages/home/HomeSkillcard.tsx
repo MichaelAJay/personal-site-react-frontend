@@ -15,7 +15,7 @@ function HomeSkillCard(
                 const section = document.getElementById(content.sectionId)
                 if (section) {
                     // section.scrollIntoView({ behavior: 'smooth' });
-                    const yOffset = -64;
+                    const yOffset = -84;
                     const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' })
                 }

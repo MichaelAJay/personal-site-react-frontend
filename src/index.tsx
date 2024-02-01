@@ -13,6 +13,10 @@ export const colorAliases = {
   darkSand: '#aba58e',
   rockBrown: '#6e7170',
   mountainLight: '#fffbed',
+  olivegreen: '#806e19',
+  lightredsand: '#e09367',
+  lightoceanblue: '#46675f',
+  lightoceanbluelite: '#46675f70'
 }
 
 const colors = {
@@ -20,11 +24,12 @@ const colors = {
   secondaryBackground: colorAliases.lightGreen,
   redTest: '#ff0000',
   blueTest: '#0000ff',
-  primary: '#31474f',
+  primary: '#31474f', // was used for button fill
   primaryText: colorAliases.lightGreen,
   buttonText: colorAliases.lightGreen,
   contentBorder: colorAliases.rockBrown,
-  transparent: '#00000000'
+  transparent: '#00000000',
+  buttonFill: colorAliases.lightoceanblue,
 }
 
 const theme = {
@@ -40,14 +45,13 @@ const theme = {
       headerBg: colors.secondaryBackground,
       headerPadding: '10px 0',
       // body
-      // bodyBg: colors.primaryBackground, // This handles the layout's content section background color
-      // bodyBg: colors.redTest,
       bodyBg: colors.contentBorder,
       // sider
       siderBg: colorAliases.darkGreen
     },
     Button: {
-      defaultBg: colors.primary,
+      // defaultBg: colors.primary,
+      defaultBg: colors.buttonFill,
       defaultColor: colors.buttonText
     },
     Menu: {

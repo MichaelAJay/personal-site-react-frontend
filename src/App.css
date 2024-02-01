@@ -47,6 +47,10 @@
   --mountainlight: #fffbed;
   --testRed: #ff0000;
   --testBlue: #00f;
+  --olivegreen: #806e19;
+  --lightredsand: #e09367;
+  --lightoceanblue: #46675f;
+  --lightoceanbluelite: #46675f40;
 }
 
 .App-layout {
