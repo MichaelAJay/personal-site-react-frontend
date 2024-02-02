@@ -17,33 +17,12 @@ const tabMap: Record<string, TabNames> = {
     DevOps: 'DevOps and Cloud Services'
 }
 
-const tabs: TabsProps['items'] = [
-    {
-        key: '1',
-        label: tabMap.FE,
-        children: <SkillTabList tabName={tabMap.FE} arr={technologiesOBJECTS} />
-    },
-    {
-        key: '2',
-        label: tabMap.BE,
-        children: <SkillTabList tabName={tabMap.BE} arr={technologiesOBJECTS} />
-    },
-    {
-        key: '3',
-        label: tabMap.Test,
-        children: <SkillTabList tabName={tabMap.Test} arr={technologiesOBJECTS} />
-    },
-    {
-        key: '4',
-        label: tabMap.DB,
-        children: <SkillTabList tabName={tabMap.DB} arr={technologiesOBJECTS} />
-    },
-    {
-        key: '5',
-        label: tabMap.DevOps,
-        children: <SkillTabList tabName={tabMap.DevOps} arr={technologiesOBJECTS} />
-    },
-];
+const tabNames: Array<TabNames> = ['Frontend Development', 'Backend Development', 'Testing', 'Database Management', 'DevOps and Cloud Services'];
+const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
+    key: (index + 1).toString(),
+    label: tabName,
+    children: <SkillTabList tabName={tabName} arr={technologiesOBJECTS} />
+}));
 
 function About() {
     return (
