@@ -1,11 +1,12 @@
 import { Flex, List, Tabs, TabsProps, Typography } from "antd";
 import { useRef } from "react";
-import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, TabNames, technologiesOBJECTS } from "./about-field-texts";
+import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, TabNames, technologiesOBJECTS } from "./about-me-field-texts";
+import { aboutSite, recognizedPlacesToImprove, thingsIveLearned, wips } from "./about-site-field-texts";
 import './About.css';
 import SkillTabList from "./SkillTabList";
 const { Title, Paragraph } = Typography;
 
-const tabNames: Array<TabNames> = ['Frontend Development', 'Backend Development', 'Testing', 'Database Management', 'DevOps and Cloud Services'];
+const tabNames: Array<TabNames | 'All'> = ['Frontend Development', 'Backend Development', 'Testing', 'Database Management', 'DevOps and Cloud Services', 'All'];
 const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
     key: (index + 1).toString(),
     label: tabName,
@@ -98,6 +99,46 @@ function About() {
                 <Title level={3}>Skills</Title>
                 <Title ref={skillsRef} level={4}>Technical</Title>
                 <Tabs defaultActiveKey="1" items={tabs} onChange={onChangeTab} />
+            </div>
+            <div className="about-site-container">
+                <Title level={2}>{aboutSite.title}</Title>
+                <Paragraph>{aboutSite.brief}</Paragraph>
+                <Paragraph>{aboutSite.p2}</Paragraph>
+                <Paragraph>{aboutSite.p3}</Paragraph>
+                <Paragraph>{aboutSite.p4}</Paragraph>
+                <Title level={3}>Things I've Learned</Title>
+                <List
+                    size="small"
+                    itemLayout="horizontal"
+                    dataSource={thingsIveLearned}
+                    renderItem={item => (
+                        <List.Item>
+                            <List.Item.Meta description={item}/>
+                        </List.Item>
+                    )}
+                />
+                <Title level={3}>Recognized Places to Improve</Title>
+                <List
+                    size="small"
+                    itemLayout="horizontal"
+                    dataSource={recognizedPlacesToImprove}
+                    renderItem={item => (
+                        <List.Item>
+                            <List.Item.Meta description={item}/>
+                        </List.Item>
+                    )}
+                />
+                <Title level={3}>Works in Progress</Title>
+                <List
+                    size="small"
+                    itemLayout="horizontal"
+                    dataSource={wips}
+                    renderItem={item => (
+                        <List.Item>
+                            <List.Item.Meta description={item}/>
+                        </List.Item>
+                    )}
+                />
             </div>
         </div>
     )

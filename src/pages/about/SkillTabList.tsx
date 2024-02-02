@@ -1,9 +1,9 @@
 import { List } from "antd";
-import { TabNames } from "./about-field-texts";
+import { TabNames } from "./about-me-field-texts";
 import ProgressBadge, { IProgressBadgeProps } from "./Progress-Badge";
 
 export type SkillTableItemProps = {
-    tabName: TabNames;
+    tabName: TabNames | 'All';
     arr: Array<IProgressBadgeProps & { tabs: Set<TabNames> }>;
 }
 
@@ -13,7 +13,7 @@ function SkillTabList({tabName, arr}: SkillTableItemProps) {
         grid={{ gutter: 16, column: 4 }}
         size="small"
         itemLayout="horizontal"
-        dataSource={arr.filter(tech => tech.tabs.has(tabName))}
+        dataSource={tabName === 'All' ? arr : arr.filter(tech => tech.tabs.has(tabName))}
         renderItem={item => (
             <List.Item>
                 <ProgressBadge {...item}/>

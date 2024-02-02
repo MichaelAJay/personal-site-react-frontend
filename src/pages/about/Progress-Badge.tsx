@@ -1,5 +1,5 @@
 import { Card, Progress } from "antd";
-import { SkillLevel } from "./about-field-texts";
+import { SkillLevel } from "./about-me-field-texts";
 import './Progress-Badge.css';
 const { Meta } = Card;
 
