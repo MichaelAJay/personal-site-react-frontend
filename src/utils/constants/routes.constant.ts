@@ -1,6 +1,6 @@
 export const ROUTES = {
     HOME: '/',
-    ABOUT: 'about-me',
+    ABOUT: 'about',
     ODDITIES: {
         SIERPINSKI: 'oddities/sierpinski',
         OTHER: 'oddities/other'
