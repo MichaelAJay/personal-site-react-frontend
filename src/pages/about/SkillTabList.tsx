@@ -1,4 +1,4 @@
-import { List, TabsProps } from "antd";
+import { List } from "antd";
 import { TabNames } from "./about-field-texts";
 import ProgressBadge, { IProgressBadgeProps } from "./Progress-Badge";
 

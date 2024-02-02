@@ -1,21 +1,12 @@
-import { Flex, List, TabsProps, Typography } from "antd";
-import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, devStrengths, TabNames, technologies, technologiesOBJECTS } from "./about-field-texts";
+import { Flex, List, Tabs, TabsProps, Typography } from "antd";
+import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, TabNames, technologiesOBJECTS } from "./about-field-texts";
 import './About.css';
-import ProgressBadge from "./Progress-Badge";
 import SkillTabList from "./SkillTabList";
 const { Title, Paragraph } = Typography;
 
 const onChangeTab = (key: string) => {
     console.log(key);
 };
-
-const tabMap: Record<string, TabNames> = {
-    FE: 'Frontend Development',
-    BE: 'Backend Development',
-    Test: 'Testing',
-    DB: 'Database Management',
-    DevOps: 'DevOps and Cloud Services'
-}
 
 const tabNames: Array<TabNames> = ['Frontend Development', 'Backend Development', 'Testing', 'Database Management', 'DevOps and Cloud Services'];
 const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
@@ -90,17 +81,7 @@ function About() {
             <div className="skills">
                 <Title level={3}>Skills</Title>
                 <Title level={4}>Technical</Title>
-                <List
-                    grid={{ gutter: 16, column: 4 }}
-                    size="small"
-                    itemLayout="horizontal"
-                    dataSource={technologiesOBJECTS}
-                    renderItem={item => (
-                        <List.Item>
-                            <ProgressBadge {...item}/>
-                        </List.Item>
-                    )}
-                />
+                <Tabs defaultActiveKey="1" items={tabs} onChange={onChangeTab} />
             </div>
         </div>
     )
