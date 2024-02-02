@@ -4,3 +4,14 @@
     align-items: center;
     padding-top: 10px;
 }
+
+.ant-card-meta.progress-badge-title .ant-card-meta-detail .ant-card-meta-title {
+    white-space: normal;
+    text-align: center;
+}
+
+/* .progress-badge-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */

@@ -6,6 +6,7 @@ const { Meta } = Card;
 export interface IProgressBadgeProps {
     level: SkillLevel;
     title: string;
+    dashPercent: number;
     description?: string;
 }
 
@@ -25,21 +26,22 @@ const conicColors = {
     '80%': '#6a0dad',
 }
 
-function ProgressBadge({level, title, description}: IProgressBadgeProps) {
+function ProgressBadge({level, title, dashPercent, description}: IProgressBadgeProps) {
     return (
         <Card
+            className="progress-badge-card"
             hoverable
             cover={
                 <Progress
                     className="progress-badge-cover"
                     type="dashboard"
-                    percent={skillLevelToPercentMap[level]}
+                    percent={dashPercent}
                     showInfo={false}
                     strokeColor={conicColors}
                 />
             }
         >
-            <Meta title={title} description={description} />
+            <Meta className="progress-badge-title" title={title} />
         </Card>
     )
 }

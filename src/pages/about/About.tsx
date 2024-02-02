@@ -1,8 +1,49 @@
-import { Flex, List, Typography } from "antd";
-import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, devStrengths, technologies, technologiesOBJECTS } from "./about-field-texts";
+import { Flex, List, TabsProps, Typography } from "antd";
+import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, devStrengths, TabNames, technologies, technologiesOBJECTS } from "./about-field-texts";
 import './About.css';
 import ProgressBadge from "./Progress-Badge";
+import SkillTabList from "./SkillTabList";
 const { Title, Paragraph } = Typography;
+
+const onChangeTab = (key: string) => {
+    console.log(key);
+};
+
+const tabMap: Record<string, TabNames> = {
+    FE: 'Frontend Development',
+    BE: 'Backend Development',
+    Test: 'Testing',
+    DB: 'Database Management',
+    DevOps: 'DevOps and Cloud Services'
+}
+
+const tabs: TabsProps['items'] = [
+    {
+        key: '1',
+        label: tabMap.FE,
+        children: <SkillTabList tabName={tabMap.FE} arr={technologiesOBJECTS} />
+    },
+    {
+        key: '2',
+        label: tabMap.BE,
+        children: <SkillTabList tabName={tabMap.BE} arr={technologiesOBJECTS} />
+    },
+    {
+        key: '3',
+        label: tabMap.Test,
+        children: <SkillTabList tabName={tabMap.Test} arr={technologiesOBJECTS} />
+    },
+    {
+        key: '4',
+        label: tabMap.DB,
+        children: <SkillTabList tabName={tabMap.DB} arr={technologiesOBJECTS} />
+    },
+    {
+        key: '5',
+        label: tabMap.DevOps,
+        children: <SkillTabList tabName={tabMap.DevOps} arr={technologiesOBJECTS} />
+    },
+];
 
 function About() {
     return (
@@ -77,7 +118,6 @@ function About() {
                     dataSource={technologiesOBJECTS}
                     renderItem={item => (
                         <List.Item>
-                            {/* <List.Item.Meta description={item} /> */}
                             <ProgressBadge {...item}/>
                         </List.Item>
                     )}
