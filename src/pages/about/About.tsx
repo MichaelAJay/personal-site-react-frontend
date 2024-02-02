@@ -1,12 +1,9 @@
 import { Flex, List, Tabs, TabsProps, Typography } from "antd";
+import { useRef } from "react";
 import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, TabNames, technologiesOBJECTS } from "./about-field-texts";
 import './About.css';
 import SkillTabList from "./SkillTabList";
 const { Title, Paragraph } = Typography;
-
-const onChangeTab = (key: string) => {
-    console.log(key);
-};
 
 const tabNames: Array<TabNames> = ['Frontend Development', 'Backend Development', 'Testing', 'Database Management', 'DevOps and Cloud Services'];
 const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
@@ -16,6 +13,25 @@ const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
 }));
 
 function About() {
+    const skillsRef = useRef<HTMLHeadingElement>(null);
+
+    const onChangeTab = () => {
+        setTimeout(() => {
+            if (skillsRef.current) {
+                const offset = 84;
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = skillsRef.current.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 0);
+    };
+
     return (
         <div className="about-container">
             <Flex justify={'space-between'} align={'start'}>
@@ -80,7 +96,7 @@ function About() {
             {/* Strengths and weaknesses */}
             <div className="skills">
                 <Title level={3}>Skills</Title>
-                <Title level={4}>Technical</Title>
+                <Title ref={skillsRef} level={4}>Technical</Title>
                 <Tabs defaultActiveKey="1" items={tabs} onChange={onChangeTab} />
             </div>
         </div>
