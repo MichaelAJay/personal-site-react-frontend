@@ -1,6 +1,7 @@
 import { Flex, List, Typography } from "antd";
-import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, devStrengths, technologies } from "./about-field-texts";
+import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, devStrengths, technologies, technologiesOBJECTS } from "./about-field-texts";
 import './About.css';
+import ProgressBadge from "./Progress-Badge";
 const { Title, Paragraph } = Typography;
 
 function About() {
@@ -70,12 +71,14 @@ function About() {
                 <Title level={3}>Skills</Title>
                 <Title level={4}>Technical</Title>
                 <List
+                    grid={{ gutter: 16, column: 4 }}
                     size="small"
                     itemLayout="horizontal"
-                    dataSource={technologies}
+                    dataSource={technologiesOBJECTS}
                     renderItem={item => (
                         <List.Item>
-                            <List.Item.Meta description={item} />
+                            {/* <List.Item.Meta description={item} /> */}
+                            <ProgressBadge {...item}/>
                         </List.Item>
                     )}
                 />
