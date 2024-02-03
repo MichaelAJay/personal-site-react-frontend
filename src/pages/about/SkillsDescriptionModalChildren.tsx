@@ -16,13 +16,12 @@ function SkillsDescriptionModalChildren() {
     return (
         <div>
             <List
-                grid={{ gutter: 16, column: 4 }}
+                grid={{ gutter: 16, column: 5 }}
                 size="small"
-                itemLayout="horizontal"
                 dataSource={mappedSkillLevels}
                 renderItem={item => (
                     <List.Item>
-                        <ProgressBadge {...item}/>
+                        <ProgressBadge {...item} includeDescription={true} />
                     </List.Item>
                 )}
             />

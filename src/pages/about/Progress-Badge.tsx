@@ -8,6 +8,7 @@ export interface IProgressBadgeProps {
     title: string;
     dashPercent: number;
     description?: string;
+    includeDescription?: boolean;
 }
 
 // const skillLevelToPercentMap: Record<SkillLevel, number> = {
@@ -26,10 +27,18 @@ const conicColors = {
     '80%': '#6a0dad',
 }
 
-function ProgressBadge({level, title, dashPercent, description}: IProgressBadgeProps) {
+function ProgressBadge({
+    level,
+    title,
+    dashPercent,
+    description,
+    includeDescription,
+}: IProgressBadgeProps) {
     return (
         <Card
-            className="progress-badge-card"
+            classNames={{
+                body: 'progress-badge-card-body'
+            }}
             hoverable
             cover={
                 <Progress
@@ -41,7 +50,7 @@ function ProgressBadge({level, title, dashPercent, description}: IProgressBadgeP
                 />
             }
         >
-            <Meta className="progress-badge-title" title={title} />
+            <Meta className="progress-badge-meta" title={title} description={ includeDescription ? description : undefined } />
         </Card>
     )
 }

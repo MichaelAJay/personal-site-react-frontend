@@ -148,7 +148,7 @@ function About() {
                     )}
                 />
                 {/* Modals */}
-                <CustomModal title="Skills Description" visible={isSkillsLegendModalVisible}
+                <CustomModal title="Skills Description" visible={isSkillsLegendModalVisible} width={'80%'}
                     onOk={handleCloseSkillsLegendModal} onCancel={handleCloseSkillsLegendModal}
                 >
                     <SkillsDescriptionModalChildren />

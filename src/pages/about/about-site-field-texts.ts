@@ -31,5 +31,6 @@ export const wips = [
     'The lists',
     'Removing some artifacts I put in place to learn (did you notice the blue corners peaking out around the content sections?',
     'The animation which occurs when navigating from a section with a side navigation panel to one without',
-    'Changing the scrollbar color'
+    'Changing the scrollbar color',
+    'Responsive design - especially the "Skills Description" modal'
 ];
