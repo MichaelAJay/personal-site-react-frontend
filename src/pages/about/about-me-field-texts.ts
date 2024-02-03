@@ -4,31 +4,36 @@ export const LOREM_IPSUM = 'Lorem ipsum dolor sit amet, consectetur adipiscing e
 
 export type SkillLevel = 'Beginner' | 'Novice' | 'Intermediate' | 'Advanced' | 'Expert';
 
-export const skillLevel: Record<SkillLevel, { name: SkillLevel, description: string }> = {
+export const skillLevel: Record<SkillLevel, { name: SkillLevel, description: string, dashPercent: number }> = {
     Beginner: 
         {
             name: 'Beginner',
             description: 'Just starting, little to no practical experience.',
+            dashPercent: 20,
         },
     Novice: 
         {
             name: 'Novice',
             description: 'Basic understanding, some hands-on experience.',
+            dashPercent: 40,
         },
     Intermediate: 
         {
             name: 'Intermediate',
             description: 'Good working knowledge, can solve problems independently.',
+            dashPercent: 60,
         },
     Advanced: 
         {
             name: 'Advanced',
             description: 'Strong in the field, capable of mentoring others, and handling complex projects.',
+            dashPercent: 80,
         },
     Expert: 
         {
             name: 'Expert',
             description: 'Leading authority, deep and broad expertise, innovates in the field.',
+            dashPercent: 95
         },
 };
 

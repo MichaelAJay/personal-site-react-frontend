@@ -25,23 +25,6 @@ type CurrentMessage = {
 }
 
 function MessageViewer() {
-    // const dummyMessages: Array<MessageStub> = [
-    //     {
-    //         "id": 1,
-    //         "name": "Michael Jay",
-    //         "email": "michael.a.jay82@gmail.com",
-    //         "created_at": "2024-01-20T22:06:20.841049-05:00"
-    //     }
-    // ]
-
-    // const dummyTargetMessage: Message = {
-    //     "id": 1,
-    //     "name": "Michael Jay",
-    //     "email": "michael.a.jay82@gmail.com",
-    //     "created_at": "2024-01-20T22:06:20.841049-05:00",
-    //     "message": "Here is the target message content"
-    // }
-
     const [data, setData] = useState<Array<MessageStub>>([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [selectedItem, setSelectedItem] = useState<Message | null>(null);

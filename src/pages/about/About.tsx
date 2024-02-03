@@ -1,8 +1,11 @@
-import { Flex, List, Tabs, TabsProps, Typography } from "antd";
-import { useRef } from "react";
+import { QuestionCircleOutlined } from "@ant-design/icons";
+import { Button, Flex, List, Tabs, TabsProps, Typography } from "antd";
+import { useRef, useState } from "react";
+import CustomModal from "../../components/CustomModal";
 import { AboutMe, aboutMePersonalAttributes, aboutMeProfessionalAttributes, TabNames, technologiesOBJECTS } from "./about-me-field-texts";
 import { aboutSite, recognizedPlacesToImprove, thingsIveLearned, wips } from "./about-site-field-texts";
 import './About.css';
+import SkillsDescriptionModalChildren from "./SkillsDescriptionModalChildren";
 import SkillTabList from "./SkillTabList";
 const { Title, Paragraph } = Typography;
 
@@ -14,6 +17,8 @@ const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
 }));
 
 function About() {
+    const [isSkillsLegendModalVisible, setIsSkillsLegendModalVisible] = useState(false);
+
     const skillsRef = useRef<HTMLHeadingElement>(null);
 
     const onChangeTab = () => {
@@ -33,6 +38,14 @@ function About() {
         }, 0);
     };
 
+    const handleOpenSkillsLegendModal = () => {
+        setIsSkillsLegendModalVisible(true);
+    }
+
+    const handleCloseSkillsLegendModal = () => {
+        setIsSkillsLegendModalVisible(false);
+    }
+
     return (
         <div className="about-container">
             <Flex justify={'space-between'} align={'start'}>
@@ -49,9 +62,7 @@ function About() {
                     <Paragraph>{AboutMe.professionalJourney}</Paragraph>
                     {/* <Title level={3}>Interests</Title>
                     <List
-                        size="small"
-                        itemLayout="horizontal"
-                        dataSource={aboutMeInterests}
+                        size="small" itemLayout="horizontal" dataSource={aboutMeInterests}
                         renderItem={item => (
                             <List.Item>
                                 <List.Item.Meta description={item}/>
@@ -94,10 +105,16 @@ function About() {
                     />
                 </div>
             </Flex>
-            {/* Strengths and weaknesses */}
+            {/* Skills */}
             <div className="skills">
                 <Title level={3}>Skills</Title>
                 <Title ref={skillsRef} level={4}>Technical</Title>
+                <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<QuestionCircleOutlined />}
+                    onClick={handleOpenSkillsLegendModal}
+                />
                 <Tabs defaultActiveKey="1" items={tabs} onChange={onChangeTab} />
             </div>
             <div className="about-site-container">
@@ -107,10 +124,7 @@ function About() {
                 <Paragraph>{aboutSite.p3}</Paragraph>
                 <Paragraph>{aboutSite.p4}</Paragraph>
                 <Title level={3}>Things I've Learned</Title>
-                <List
-                    size="small"
-                    itemLayout="horizontal"
-                    dataSource={thingsIveLearned}
+                <List size="small" itemLayout="horizontal" dataSource={thingsIveLearned}
                     renderItem={item => (
                         <List.Item>
                             <List.Item.Meta description={item}/>
@@ -118,10 +132,7 @@ function About() {
                     )}
                 />
                 <Title level={3}>Recognized Places to Improve</Title>
-                <List
-                    size="small"
-                    itemLayout="horizontal"
-                    dataSource={recognizedPlacesToImprove}
+                <List size="small" itemLayout="horizontal" dataSource={recognizedPlacesToImprove}
                     renderItem={item => (
                         <List.Item>
                             <List.Item.Meta description={item}/>
@@ -129,16 +140,19 @@ function About() {
                     )}
                 />
                 <Title level={3}>Works in Progress</Title>
-                <List
-                    size="small"
-                    itemLayout="horizontal"
-                    dataSource={wips}
+                <List size="small" itemLayout="horizontal" dataSource={wips}
                     renderItem={item => (
                         <List.Item>
                             <List.Item.Meta description={item}/>
                         </List.Item>
                     )}
                 />
+                {/* Modals */}
+                <CustomModal title="Skills Description" visible={isSkillsLegendModalVisible}
+                    onOk={handleCloseSkillsLegendModal} onCancel={handleCloseSkillsLegendModal}
+                >
+                    <SkillsDescriptionModalChildren />
+                </CustomModal>
             </div>
         </div>
     )
