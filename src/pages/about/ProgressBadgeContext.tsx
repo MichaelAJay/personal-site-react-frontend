@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, ReactNode, useContext, useState } from "react";
 
 interface ModalData {
     title: string
@@ -22,7 +22,11 @@ const ProgressBadgeContext = createContext<ProgressBadgeContextType>(defaultStat
 
 export const useProgressBadge = () => useContext(ProgressBadgeContext);
 
-export const ProgressBadgeProvider: React.FC = ({ children }: any) => {
+interface ProgressBadgeProviderProps {
+    children: ReactNode
+}
+
+export const ProgressBadgeProvider: React.FC<ProgressBadgeProviderProps> = ({ children }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const [modalData, setModalData] = useState<ModalData>({ title: '' });
 

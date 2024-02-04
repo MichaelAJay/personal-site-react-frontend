@@ -17,6 +17,7 @@ import {
 } from './about-site-field-texts';
 import './About.css';
 import AboutSectionWithStandardList from './AboutSectionWithStandardList';
+import { ProgressBadgeProvider } from './ProgressBadgeContext';
 import SkillsDescriptionModalChildren from './SkillsDescriptionModalChildren';
 import SkillTabList from './SkillTabList';
 const { Title, Paragraph } = Typography;
@@ -35,7 +36,7 @@ const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
   children: <SkillTabList tabName={tabName} arr={technologiesOBJECTS} />,
 }));
 
-function About() {
+function InternalAbout() {
   const [isSkillsLegendModalVisible, setIsSkillsLegendModalVisible] =
     useState(false);
 
@@ -134,4 +135,11 @@ function About() {
   );
 }
 
-export default About;
+// export default About;
+export default function About() {
+  return (
+    <ProgressBadgeProvider>
+      <InternalAbout />
+    </ProgressBadgeProvider>
+  )
+}
