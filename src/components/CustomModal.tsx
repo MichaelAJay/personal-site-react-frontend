@@ -7,7 +7,7 @@ function CustomModal({
   onCancel,
   children,
   width,
-  isFooterNull
+  isFooterNull,
 }: {
   title: string;
   visible: boolean;
@@ -17,27 +17,16 @@ function CustomModal({
   width?: number | string;
   isFooterNull?: boolean; // Footer includes "Ok" and "Cancel" buttons
 }) {
-
   const modalProps = {
     title,
     visible,
     onOk,
     onCancel,
     width,
-    ...(isFooterNull ? { footer: null } : {})
-  }
+    ...(isFooterNull ? { footer: null } : {}),
+  };
 
-  return (
-    <Modal {...modalProps}
-      // title={title}
-      // visible={visible}
-      // onOk={onOk}
-      // onCancel={onCancel}
-      // width={width}
-    >
-      {children}
-    </Modal>
-  );
+  return <Modal {...modalProps}>{children}</Modal>;
 }
 
 export default CustomModal;
