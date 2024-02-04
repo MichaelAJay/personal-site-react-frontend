@@ -1,3 +1,7 @@
 .ant-card.skill-level-badge .ant-card-body {
     padding: 24px 12px;
 }
+
+.skills-description-list-item {
+    height: 320px;
+}

@@ -36,6 +36,7 @@ function ProgressBadge({
 }: IProgressBadgeProps) {
     return (
         <Card
+            className="progress-badge-card"
             classNames={{
                 body: 'progress-badge-card-body'
             }}

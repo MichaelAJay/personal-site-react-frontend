@@ -1,6 +1,7 @@
 import { List } from "antd";
 import { SkillLevel, skillLevel } from "./about-me-field-texts";
 import ProgressBadge, { IProgressBadgeProps } from "./Progress-Badge";
+import './SkillsDescriptionModalChildren.css';
 
 const mappedSkillLevels: Array<IProgressBadgeProps> = [];
 for (const property in skillLevel) {
@@ -20,7 +21,7 @@ function SkillsDescriptionModalChildren() {
                 size="small"
                 dataSource={mappedSkillLevels}
                 renderItem={item => (
-                    <List.Item>
+                    <List.Item className="skills-description-list-item">
                         <ProgressBadge {...item} includeDescription={true} />
                     </List.Item>
                 )}

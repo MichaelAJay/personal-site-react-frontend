@@ -14,8 +14,6 @@
     padding: 24px 12px;
 }
 
-/* .progress-badge-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
+.progress-badge-card {
+    height: 100%;
+}
