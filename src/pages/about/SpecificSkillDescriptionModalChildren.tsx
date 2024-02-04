@@ -1,5 +1,5 @@
 import { Progress, Typography } from "antd";
-import ProgressBadge, { conicColors, IProgressBadgeProps } from "./ProgressBadge";
+import ProgressBadgeDisplay, { conicColors, IProgressBadgeProps } from "./ProgressBadgeDisplay";
 import { ProgressBadgeProvider, useProgressBadge } from "./ProgressBadgeContext";
 const { Paragraph } = Typography;
 
