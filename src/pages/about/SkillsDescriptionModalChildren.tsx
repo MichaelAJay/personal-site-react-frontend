@@ -1,6 +1,5 @@
-import { List } from 'antd';
 import { SkillLevel, skillLevel } from './about-me-field-texts';
-import ProgressBadge, { IProgressBadgeProps } from './Progress-Badge';
+import ProgressBadge, { IProgressBadgeProps } from './ProgressBadge';
 import './SkillsDescriptionModalChildren.css';
 
 const mappedSkillLevels: Array<IProgressBadgeProps> = [];

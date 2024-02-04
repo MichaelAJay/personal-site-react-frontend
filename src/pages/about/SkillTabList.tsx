@@ -1,6 +1,6 @@
 import { List } from 'antd';
 import { TabNames } from './about-me-field-texts';
-import ProgressBadge, { IProgressBadgeProps } from './Progress-Badge';
+import ProgressBadge, { IProgressBadgeProps } from './ProgressBadge';
 
 export type SkillTabItemProps = {
   tabName: TabNames | 'All';

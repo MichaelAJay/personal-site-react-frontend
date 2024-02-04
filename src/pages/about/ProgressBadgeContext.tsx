@@ -1,6 +1,10 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
+import { SkillLevel } from "./about-me-field-texts";
 
 interface ModalData {
+    dashPercent: number;
+    level: SkillLevel;
+    levelAssessmentReason: string;
     title: string
 }
 
@@ -13,7 +17,12 @@ interface ProgressBadgeContextType {
 
 const defaultState: ProgressBadgeContextType = {
     modalVisible: false,
-    modalData: { title: '' },
+    modalData: { 
+        dashPercent: 50,
+        level: 'Intermediate',
+        levelAssessmentReason: '',
+        title: '',
+    },
     showModal: () => {},
     hideModal: () => {},
 }
@@ -28,7 +37,7 @@ interface ProgressBadgeProviderProps {
 
 export const ProgressBadgeProvider: React.FC<ProgressBadgeProviderProps> = ({ children }) => {
     const [modalVisible, setModalVisible] = useState(false);
-    const [modalData, setModalData] = useState<ModalData>({ title: '' });
+    const [modalData, setModalData] = useState<ModalData>(defaultState.modalData);
 
     const showModal = (data: ModalData) => {
         setModalData(data);

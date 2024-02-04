@@ -1,5 +1,5 @@
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import { Button, Flex, List, Tabs, TabsProps, Typography } from 'antd';
+import { Button, Flex, Tabs, TabsProps, Typography } from 'antd';
 import { useRef, useState } from 'react';
 import CustomModal from '../../components/CustomModal';
 import {
@@ -17,7 +17,7 @@ import {
 } from './about-site-field-texts';
 import './About.css';
 import AboutSectionWithStandardList from './AboutSectionWithStandardList';
-import { ProgressBadgeProvider } from './ProgressBadgeContext';
+import { ProgressBadgeProvider, useProgressBadge } from './ProgressBadgeContext';
 import SkillsDescriptionModalChildren from './SkillsDescriptionModalChildren';
 import SkillTabList from './SkillTabList';
 const { Title, Paragraph } = Typography;
@@ -39,6 +39,8 @@ const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
 function InternalAbout() {
   const [isSkillsLegendModalVisible, setIsSkillsLegendModalVisible] =
     useState(false);
+
+  const { modalVisible, modalData, hideModal } = useProgressBadge(); 
 
   const skillsRef = useRef<HTMLHeadingElement>(null);
 
@@ -79,15 +81,7 @@ function InternalAbout() {
           <Paragraph>{AboutMe.professionalViewOfLLMs}</Paragraph>
           <Title level={3}>{'My Journey (So Far)'}</Title>
           <Paragraph>{AboutMe.professionalJourney}</Paragraph>
-          {/* <Title level={3}>Interests</Title>
-                    <List
-                        size="small" itemLayout="horizontal" dataSource={aboutMeInterests}
-                        renderItem={item => (
-                            <List.Item>
-                                <List.Item.Meta description={item}/>
-                            </List.Item>
-                        )}
-                    /> */}
+          {/* <AboutSectionWithStandardList level={3} title="Interests" dataSource={aboutMeInterests} /> */}
         </div>
         <img className="headshot" alt="My headshot" src="/mjay_headshot.jpeg" />
       </Flex>
@@ -130,6 +124,16 @@ function InternalAbout() {
         >
           <SkillsDescriptionModalChildren />
         </CustomModal>
+        <CustomModal
+          title={modalData.title}
+          visible={modalVisible}
+          width={'90%'}
+          onOk={hideModal}
+          onCancel={hideModal}
+          isFooterNull={true}
+        >
+          <div>Specific Skill Details Modal</div>
+        </CustomModal>
       </div>
     </div>
   );
@@ -143,3 +147,7 @@ export default function About() {
     </ProgressBadgeProvider>
   )
 }
+
+/**
+ * Note:  I'm not sure if the context specific implementation should occur in About and be passed in to Inner...
+ */

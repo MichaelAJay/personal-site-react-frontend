@@ -1,6 +1,6 @@
 import { Card, Progress } from 'antd';
 import { SkillLevel } from './about-me-field-texts';
-import './Progress-Badge.css';
+import './ProgressBadge.css';
 const { Meta } = Card;
 
 export interface IProgressBadgeProps {
@@ -19,7 +19,7 @@ export interface IProgressBadgeProps {
 //     Expert: 90, // [90-100]
 // }
 
-const conicColors = {
+export const conicColors = {
   '0%': '#add8e6',
   '20%': '#90ee90',
   '40%': '#ffd700',
