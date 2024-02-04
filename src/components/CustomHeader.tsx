@@ -1,30 +1,36 @@
-import './CustomHeader.css'
-import { Button } from "antd"
-import { Header } from "antd/es/layout/layout"
-import { useNavigate } from "react-router-dom";
-import MainNav from "./MainNav"
+import './CustomHeader.css';
+import { Button } from 'antd';
+import { Header } from 'antd/es/layout/layout';
+import { useNavigate } from 'react-router-dom';
+import MainNav from './MainNav';
 
 function CustomHeader({ onNavigate }: { onNavigate: any }) {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/login')
-  }
+    navigate('/login');
+  };
 
-    return (
-        <Header className='header'>
-        {/* <Header> */}
-          <div className='header-logo-container'>
-            <img className='header-logo' src="/app-logo-400w.png" alt="Logo - A mountain with a tree which suggests recursion"/>
-          </div>
-          {/* <Image
+  return (
+    <Header className="header">
+      {/* <Header> */}
+      <div className="header-logo-container">
+        <img
+          className="header-logo"
+          src="/app-logo-400w.png"
+          alt="Logo - A mountain with a tree which suggests recursion"
+        />
+      </div>
+      {/* <Image
             src="/app-logo-400w.png"
             // width={600}
           /> */}
-          <MainNav onNavigate={onNavigate} />
-          <Button className='header-login' onClick={handleLoginClick}>Login</Button>
-        </Header>
-    )
+      <MainNav onNavigate={onNavigate} />
+      <Button className="header-login" onClick={handleLoginClick}>
+        Login
+      </Button>
+    </Header>
+  );
 }
 
-export default CustomHeader
+export default CustomHeader;

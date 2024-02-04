@@ -1,24 +1,43 @@
-import { Modal } from "antd";
+import { Modal } from 'antd';
 
-function CustomModal({title, visible, onOk, onCancel, children, width}: {
-    title: string;
-    visible: boolean;
-    onOk: any;
-    onCancel: any;
-    children: any;
-    width?: number | string; // px
+function CustomModal({
+  title,
+  visible,
+  onOk,
+  onCancel,
+  children,
+  width,
+  isFooterNull
+}: {
+  title: string;
+  visible: boolean;
+  onOk: any;
+  onCancel: any;
+  children: any;
+  width?: number | string;
+  isFooterNull?: boolean; // Footer includes "Ok" and "Cancel" buttons
 }) {
-    return (
-        <Modal
-            title={title}
-            visible={visible}
-            onOk={onOk}
-            onCancel={onCancel}
-            width={width}
-        >
-            {children}
-        </Modal>
-    )
+
+  const modalProps = {
+    title,
+    visible,
+    onOk,
+    onCancel,
+    width,
+    ...(isFooterNull ? { footer: null } : {})
+  }
+
+  return (
+    <Modal {...modalProps}
+      // title={title}
+      // visible={visible}
+      // onOk={onOk}
+      // onCancel={onCancel}
+      // width={width}
+    >
+      {children}
+    </Modal>
+  );
 }
 
-export default CustomModal
+export default CustomModal;

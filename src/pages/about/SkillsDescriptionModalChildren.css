@@ -1,12 +1,12 @@
 .skills-grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-    justify-content: space-between;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .skills-grid-item {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

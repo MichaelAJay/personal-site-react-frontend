@@ -1,25 +1,25 @@
 .main-nav {
-    color: var(--darkgreen);
-    background-color: var(--lightgreen);
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  color: var(--darkgreen);
+  background-color: var(--lightgreen);
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sider-nav {
-    color: var(--mountainlight);
-    background-color: var(--darkgreen);
+  color: var(--mountainlight);
+  background-color: var(--darkgreen);
 }
 
 .main-nav .ant-menu-item:hover {
-    color: var(--mountainlight) !important;
-    background-color: var(--darkgreen) !important;
+  color: var(--mountainlight) !important;
+  background-color: var(--darkgreen) !important;
 }
 
 .sider-nav .ant-menu-item:hover {
-    color: var(--darkgreen) !important;
-    background-color: var(--lightgreen) !important;
+  color: var(--darkgreen) !important;
+  background-color: var(--lightgreen) !important;
 }

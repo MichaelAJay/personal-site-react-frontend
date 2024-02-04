@@ -14,39 +14,45 @@ import Signup from './pages/auth/signup';
 import { isUserAdmin } from './utils/functions/is-user-admin.function';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
-const { Content } = Layout
+const { Content } = Layout;
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('')
+  const [currentPage, setCurrentPage] = useState('');
 
   return (
     <Router>
-      <Layout className='App-layout'>
+      <Layout className="App-layout">
         <Affix>
-          <CustomHeader
-            onNavigate={setCurrentPage}
-          />
+          <CustomHeader onNavigate={setCurrentPage} />
         </Affix>
-        <Layout>          
-          <SiderNav
-            onNavigate={setCurrentPage}
-            currentPage={currentPage}
-          />          
-          
-          <Layout className='App-layout-content'>
-            <Content className='app-content'>
-                <div>
-                  <Routes>
-                    <Route path={ROUTES.HOME} element={<Home />} />
-                    <Route path={ROUTES.ABOUT} element={<About />} />
-                    <Route path={ROUTES.ODDITIES.SIERPINSKI} element={<SierpinksiTriangle />} />
-                    <Route path={ROUTES.ODDITIES.OTHER} element={<OtherOddity />} />
-                    <Route path={ROUTES.CONTACT} element={<ContactForm />} />
-                    {isUserAdmin() && <Route path={ROUTES.ADMIN.MESSAGES} element={<MessageViewer />} />}
-                    <Route path={ROUTES.AUTH.LOGIN} element={<Login />} />
-                    <Route path={ROUTES.AUTH.SIGNUP} element={<Signup />} />
-                  </Routes>
-                </div>
+        <Layout>
+          <SiderNav onNavigate={setCurrentPage} currentPage={currentPage} />
+
+          <Layout className="App-layout-content">
+            <Content className="app-content">
+              <div>
+                <Routes>
+                  <Route path={ROUTES.HOME} element={<Home />} />
+                  <Route path={ROUTES.ABOUT} element={<About />} />
+                  <Route
+                    path={ROUTES.ODDITIES.SIERPINSKI}
+                    element={<SierpinksiTriangle />}
+                  />
+                  <Route
+                    path={ROUTES.ODDITIES.OTHER}
+                    element={<OtherOddity />}
+                  />
+                  <Route path={ROUTES.CONTACT} element={<ContactForm />} />
+                  {isUserAdmin() && (
+                    <Route
+                      path={ROUTES.ADMIN.MESSAGES}
+                      element={<MessageViewer />}
+                    />
+                  )}
+                  <Route path={ROUTES.AUTH.LOGIN} element={<Login />} />
+                  <Route path={ROUTES.AUTH.SIGNUP} element={<Signup />} />
+                </Routes>
+              </div>
             </Content>
           </Layout>
         </Layout>

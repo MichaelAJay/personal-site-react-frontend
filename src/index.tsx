@@ -16,8 +16,8 @@ export const colorAliases = {
   olivegreen: '#806e19',
   lightredsand: '#e09367',
   lightoceanblue: '#46675f',
-  lightoceanbluelite: '#46675f70'
-}
+  lightoceanbluelite: '#46675f70',
+};
 
 const colors = {
   primaryBackground: colorAliases.mountainLight,
@@ -30,13 +30,13 @@ const colors = {
   contentBorder: colorAliases.rockBrown,
   transparent: '#00000000',
   buttonFill: colorAliases.lightoceanblue,
-}
+};
 
 const theme = {
   token: {
     colorPrimary: colors.primary,
     colorText: colorAliases.darkGreen,
-    colorBgContainer: colors.primaryBackground
+    colorBgContainer: colors.primaryBackground,
     // colorBgContainer changes the background color of the nav bar
   },
   components: {
@@ -47,29 +47,29 @@ const theme = {
       // body
       bodyBg: colors.contentBorder,
       // sider
-      siderBg: colorAliases.darkGreen
+      siderBg: colorAliases.darkGreen,
     },
     Button: {
       // defaultBg: colors.primary,
       defaultBg: colors.buttonFill,
-      defaultColor: colors.buttonText
+      defaultColor: colors.buttonText,
     },
     Menu: {
       itemColor: colorAliases.mountainLight,
-      itemBg: colors.transparent
-    }
-  }
-}
+      itemBg: colors.transparent,
+    },
+  },
+};
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
     <ConfigProvider theme={theme}>
       <App />
     </ConfigProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

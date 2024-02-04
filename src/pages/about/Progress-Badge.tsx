@@ -1,14 +1,14 @@
-import { Card, Progress } from "antd";
-import { SkillLevel } from "./about-me-field-texts";
+import { Card, Progress } from 'antd';
+import { SkillLevel } from './about-me-field-texts';
 import './Progress-Badge.css';
 const { Meta } = Card;
 
 export interface IProgressBadgeProps {
-    level: SkillLevel;
-    title: string;
-    dashPercent: number;
-    description?: string;
-    includeDescription?: boolean;
+  level: SkillLevel;
+  title: string;
+  dashPercent: number;
+  description?: string;
+  includeDescription?: boolean;
 }
 
 // const skillLevelToPercentMap: Record<SkillLevel, number> = {
@@ -20,40 +20,44 @@ export interface IProgressBadgeProps {
 // }
 
 const conicColors = {
-    '0%': '#add8e6',
-    '20%': '#90ee90',
-    '40%': '#ffd700',
-    '60%': '#ffa500',
-    '80%': '#6a0dad',
-}
+  '0%': '#add8e6',
+  '20%': '#90ee90',
+  '40%': '#ffd700',
+  '60%': '#ffa500',
+  '80%': '#6a0dad',
+};
 
 function ProgressBadge({
-    level,
-    title,
-    dashPercent,
-    description,
-    includeDescription,
+  level,
+  title,
+  dashPercent,
+  description,
+  includeDescription,
 }: IProgressBadgeProps) {
-    return (
-        <Card
-            className="progress-badge-card"
-            classNames={{
-                body: 'progress-badge-card-body'
-            }}
-            hoverable
-            cover={
-                <Progress
-                    className="progress-badge-cover"
-                    type="dashboard"
-                    percent={dashPercent}
-                    showInfo={false}
-                    strokeColor={conicColors}
-                />
-            }
-        >
-            <Meta className="progress-badge-meta" title={title} description={ includeDescription ? description : undefined } />
-        </Card>
-    )
+  return (
+    <Card
+      className="progress-badge-card"
+      classNames={{
+        body: 'progress-badge-card-body',
+      }}
+      hoverable
+      cover={
+        <Progress
+          className="progress-badge-cover"
+          type="dashboard"
+          percent={dashPercent}
+          showInfo={false}
+          strokeColor={conicColors}
+        />
+      }
+    >
+      <Meta
+        className="progress-badge-meta"
+        title={title}
+        description={includeDescription ? description : undefined}
+      />
+    </Card>
+  );
 }
 
 export default ProgressBadge;

@@ -1,33 +1,33 @@
 .header {
-    /* background-color: transparent; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 16px; */
+  /* background-color: transparent; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 16px; */
 }
 
 .header-logo-container {
-    height: 64px;
-    display: flex;
-    align-items: center;
+  height: 64px;
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
-    height: auto;
-    max-height: 100%;
-    width: auto;
-    max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
 }
 
 .header-login {
-    /* background-color: transparent; */
-    border: none;
-    /* color: var(--backgroundwhite); */
-    /* padding: 8px 16px; */
-    cursor: pointer;
-    margin: 0 16px 0 0;
+  /* background-color: transparent; */
+  border: none;
+  /* color: var(--backgroundwhite); */
+  /* padding: 8px 16px; */
+  cursor: pointer;
+  margin: 0 16px 0 0;
 }
 
 .Header-login:hover {
-    background-color: var(--testRed);
+  background-color: var(--testRed);
 }
