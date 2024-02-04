@@ -9,6 +9,7 @@ export interface IProgressBadgeProps {
   dashPercent: number;
   description?: string;
   includeDescription?: boolean;
+  levelAssessmentReason: string;
 }
 
 // const skillLevelToPercentMap: Record<SkillLevel, number> = {
@@ -33,7 +34,7 @@ function ProgressBadgeDisplay({
   dashPercent,
   description,
   includeDescription,
-}: IProgressBadgeProps) {
+}: Omit<IProgressBadgeProps, 'levelAssessmentReason'>) {
   return (
     <Card
       className="progress-badge-card"

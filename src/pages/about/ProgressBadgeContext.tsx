@@ -40,6 +40,7 @@ export const ProgressBadgeProvider: React.FC<ProgressBadgeProviderProps> = ({ ch
     const [modalData, setModalData] = useState<ModalData>(defaultState.modalData);
 
     const showModal = (data: ModalData) => {
+        console.log('showModal data', data)
         setModalData(data);
         setModalOpen(true);
     }

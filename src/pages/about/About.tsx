@@ -20,6 +20,7 @@ import AboutSectionWithStandardList from './AboutSectionWithStandardList';
 import { ProgressBadgeProvider, useProgressBadge } from './ProgressBadgeContext';
 import SkillsDescriptionModalChildren from './SkillsDescriptionModalChildren';
 import SkillTabList from './SkillTabList';
+import SpecificSkillDescriptionModalChildren from './SpecificSkillDescriptionModalChildren';
 const { Title, Paragraph } = Typography;
 
 const tabNames: Array<TabNames | 'All'> = [
@@ -132,7 +133,7 @@ function InternalAbout() {
           onCancel={hideModal}
           isFooterNull={true}
         >
-          <div>Specific Skill Details Modal</div>
+          <SpecificSkillDescriptionModalChildren />
         </CustomModal>
       </div>
     </div>
