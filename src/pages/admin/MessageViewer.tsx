@@ -26,7 +26,7 @@ type CurrentMessage = {
 
 function MessageViewer() {
   const [data, setData] = useState<Array<MessageStub>>([]);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<Message | null>(null);
 
   // Hooks
@@ -45,14 +45,14 @@ function MessageViewer() {
         message: message.Message,
       };
       setSelectedItem(convertedMessage);
-      setIsModalVisible(true);
+      setIsModalOpen(true);
     } catch (err) {
       console.error('ARGH', err);
     }
   };
 
   const handleCloseModal = () => {
-    setIsModalVisible(false);
+    setIsModalOpen(false);
   };
 
   const setMessages = async () => {
@@ -97,7 +97,7 @@ function MessageViewer() {
       />
       <CustomModal
         title="Details"
-        visible={isModalVisible}
+        open={isModalOpen}
         onOk={handleCloseModal}
         onCancel={handleCloseModal}
       >

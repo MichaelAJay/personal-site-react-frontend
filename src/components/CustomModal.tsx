@@ -2,7 +2,7 @@ import { Modal } from 'antd';
 
 function CustomModal({
   title,
-  visible,
+  open,
   onOk,
   onCancel,
   children,
@@ -10,7 +10,7 @@ function CustomModal({
   isFooterNull,
 }: {
   title: string;
-  visible: boolean;
+  open: boolean;
   onOk: any;
   onCancel: any;
   children: any;
@@ -19,7 +19,7 @@ function CustomModal({
 }) {
   const modalProps = {
     title,
-    visible,
+    open,
     onOk,
     onCancel,
     width,

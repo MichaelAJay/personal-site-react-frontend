@@ -1,8 +1,14 @@
 import ProgressBadgeDisplay, { IProgressBadgeProps } from "./ProgressBadgeDisplay";
 
 function InteractiveProgressBadge(props: IProgressBadgeProps) {
+    const handleClick = () => {
+        console.log('clicky clicky')
+    }
+
     return (
-        <ProgressBadgeDisplay {...props} />
+        <div onClick={handleClick}>
+            <ProgressBadgeDisplay {...props} />
+        </div>
     )
 }
 
