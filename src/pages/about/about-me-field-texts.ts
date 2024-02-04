@@ -79,24 +79,6 @@ export const devWeaknesses = [
     'UI styling'
 ];
 
-export const languagesAndFrameworks = [
-    `JavaScript, TypeScript, and Node.js - ${skillLevel.Advanced.name}`,
-    `React - ${skillLevel.Intermediate.name}`,
-    `Python - ${skillLevel.Intermediate.name}`,
-    `Go - ${skillLevel.Intermediate.name}`
-];
-
-export const dbs = [
-    'SQL - Adept use of ORMs and direct SQL use in a backend developer context',
-    'NoSQL - Adept MongoDB developer with experience in DynamoDB and Google Cloud Firestore Firebase'
-];
-
-export const cloudSkills = [
-    `Server deployment and monitoring - ${skillLevel.Intermediate.name}`,
-    `Database configuration and deployment - ${skillLevel.Intermediate.name}`,
-    `Networking - ${skillLevel.Beginner.name}`
-]
-
 export const technologies = [
     `JavaScript, TypeScript, and Node.js - ${skillLevel.Advanced.name}`,
     `NestJS - ${skillLevel.Advanced.name} (REST deployments)`,
