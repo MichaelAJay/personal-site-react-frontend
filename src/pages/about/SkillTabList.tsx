@@ -1,6 +1,7 @@
 import { List } from 'antd';
 import { TabNames } from './about-me-field-texts';
-import ProgressBadgeDisplay, { IProgressBadgeProps } from './ProgressBadgeDisplay';
+import InteractiveProgressBadge from './InteractiveProgressBadge';
+import { IProgressBadgeProps } from './ProgressBadgeDisplay';
 
 export type SkillTabItemProps = {
   tabName: TabNames | 'All';
@@ -18,7 +19,7 @@ function SkillTabList({ tabName, arr }: SkillTabItemProps) {
       }
       renderItem={(item) => (
         <List.Item>
-          <ProgressBadgeDisplay {...item} />
+          <InteractiveProgressBadge {...item} />
         </List.Item>
       )}
     />
