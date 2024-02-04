@@ -114,19 +114,21 @@ export type TabNames =
   | 'DevOps and Cloud Services';
 
 export const technologiesOBJECTS: Array<
-  IProgressBadgeProps & { tabs: Set<TabNames> }
+  IProgressBadgeProps & { tabs: Set<TabNames>; levelAssessmentReason: string }
 > = [
   {
     title: 'JavaScript & TypeScript',
     level: skillLevel.Advanced.name,
     dashPercent: 80,
     tabs: new Set<TabNames>(['Frontend Development', 'Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Node.js',
     level: skillLevel.Advanced.name,
     dashPercent: 80,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'External Integrations',
@@ -134,6 +136,7 @@ export const technologiesOBJECTS: Array<
     dashPercent: 80,
     description: 'REST deployments',
     tabs: new Set<TabNames>(['Frontend Development', 'Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'REST',
@@ -141,12 +144,14 @@ export const technologiesOBJECTS: Array<
     dashPercent: 80,
     description: 'REST deployments',
     tabs: new Set<TabNames>(['Frontend Development', 'Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Accessibility',
     level: skillLevel.Beginner.name,
     dashPercent: 15,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'GraphQL (Consumption)',
@@ -154,6 +159,7 @@ export const technologiesOBJECTS: Array<
     dashPercent: 50,
     description: 'REST deployments',
     tabs: new Set<TabNames>(['Frontend Development', 'Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'RPC (Consumption)',
@@ -161,6 +167,7 @@ export const technologiesOBJECTS: Array<
     dashPercent: 50,
     description: 'REST deployments',
     tabs: new Set<TabNames>(['Frontend Development', 'Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'API Creation',
@@ -168,6 +175,7 @@ export const technologiesOBJECTS: Array<
     dashPercent: 80,
     description: 'REST deployments',
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'NestJS',
@@ -175,144 +183,168 @@ export const technologiesOBJECTS: Array<
     dashPercent: 80,
     description: 'REST deployments',
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Express',
     level: skillLevel.Advanced.name,
     dashPercent: 50,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Fastify',
     level: skillLevel.Advanced.name,
     dashPercent: 40,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'HAPI',
     level: skillLevel.Advanced.name,
     dashPercent: 50,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Request Validation',
     level: skillLevel.Advanced.name,
     dashPercent: 70,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Jest',
     level: skillLevel.Intermediate.name,
     dashPercent: 60,
     tabs: new Set<TabNames>(['Testing']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Unit Testing',
     level: skillLevel.Intermediate.name,
     dashPercent: 60,
     tabs: new Set<TabNames>(['Testing']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Integration Testing',
     level: skillLevel.Intermediate.name,
     dashPercent: 60,
     tabs: new Set<TabNames>(['Testing']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'E2E Testing',
     level: skillLevel.Intermediate.name,
     dashPercent: 40,
     tabs: new Set<TabNames>(['Testing']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'React',
     level: skillLevel.Intermediate.name,
     dashPercent: 60,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Vue',
     level: skillLevel.Novice.name,
     dashPercent: 35,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Ant Design',
     level: skillLevel.Intermediate.name,
     dashPercent: 55,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'HTML',
     level: skillLevel.Intermediate.name,
     dashPercent: 55,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'CSS',
     level: skillLevel.Novice.name,
     dashPercent: 35,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Responsive Web Design',
     level: skillLevel.Beginner.name,
     dashPercent: 20,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Tailwind CSS',
     level: skillLevel.Beginner.name,
     dashPercent: 15,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'State Management',
     level: skillLevel.Beginner.name,
     dashPercent: 10,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Understanding of DOM',
     level: skillLevel.Beginner.name,
     dashPercent: 5,
     tabs: new Set<TabNames>(['Frontend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Python',
     level: skillLevel.Intermediate.name,
     dashPercent: 55,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'FastAPI',
     level: skillLevel.Novice.name,
     dashPercent: 40,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Go',
     level: skillLevel.Intermediate.name,
     dashPercent: 55,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Gin',
     level: skillLevel.Novice.name,
     dashPercent: 45,
     tabs: new Set<TabNames>(['Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Sentry (Performance Monitoring and Error Tracking',
     level: skillLevel.Novice.name,
     dashPercent: 45,
     tabs: new Set<TabNames>(['Frontend Development', 'Backend Development']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'SQL',
     level: skillLevel.Intermediate.name,
     dashPercent: 60,
     tabs: new Set<TabNames>(['Database Management']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'ORM/ODM',
@@ -320,12 +352,14 @@ export const technologiesOBJECTS: Array<
     dashPercent: 65,
     description: 'General',
     tabs: new Set<TabNames>(['Backend Development', 'Database Management']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'MongoDB',
     level: skillLevel.Intermediate.name,
     dashPercent: 60,
     tabs: new Set<TabNames>(['Database Management']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Cloud server deployment',
@@ -335,6 +369,7 @@ export const technologiesOBJECTS: Array<
       'Backend Development',
       'DevOps and Cloud Services',
     ]),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Cloud DB deployment',
@@ -344,6 +379,7 @@ export const technologiesOBJECTS: Array<
       'Database Management',
       'DevOps and Cloud Services',
     ]),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Cloud Storage',
@@ -355,24 +391,28 @@ export const technologiesOBJECTS: Array<
       'Backend Development',
       'DevOps and Cloud Services',
     ]),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'IAM',
     level: skillLevel.Intermediate.name,
     dashPercent: 55,
     tabs: new Set<TabNames>(['DevOps and Cloud Services']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Docker',
     level: skillLevel.Intermediate.name,
     dashPercent: 50,
     tabs: new Set<TabNames>(['DevOps and Cloud Services']),
+    levelAssessmentReason: 'REASON HERE',
   },
   {
     title: 'Kubernetes',
     level: skillLevel.Novice.name,
     dashPercent: 30,
     tabs: new Set<TabNames>(['DevOps and Cloud Services']),
+    levelAssessmentReason: 'REASON HERE',
   },
 ];
 
