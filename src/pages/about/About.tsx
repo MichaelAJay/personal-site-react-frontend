@@ -16,6 +16,7 @@ import {
   wips,
 } from './about-site-field-texts';
 import './About.css';
+import AboutSectionWithStandardList from './AboutSectionWithStandardList';
 import SkillsDescriptionModalChildren from './SkillsDescriptionModalChildren';
 import SkillTabList from './SkillTabList';
 const { Title, Paragraph } = Typography;
@@ -91,32 +92,8 @@ function About() {
       </Flex>
       {/* Attributes */}
       <Flex justify={'space-around'} align={'start'}>
-        <div>
-          <Title level={3}>Professional Attributes</Title>
-          <List
-            size="small"
-            itemLayout="horizontal"
-            dataSource={aboutMeProfessionalAttributes}
-            renderItem={(item) => (
-              <List.Item>
-                <List.Item.Meta description={item} />
-              </List.Item>
-            )}
-          />
-        </div>
-        <div>
-          <Title level={3}>Personal Attributes</Title>
-          <List
-            size="small"
-            itemLayout="horizontal"
-            dataSource={aboutMePersonalAttributes}
-            renderItem={(item) => (
-              <List.Item>
-                <List.Item.Meta description={item} />
-              </List.Item>
-            )}
-          />
-        </div>
+        <AboutSectionWithStandardList level={3} title="Professional Attributes" dataSource={aboutMeProfessionalAttributes} />
+        <AboutSectionWithStandardList level={3} title="Personal Attributes" dataSource={aboutMePersonalAttributes} />
       </Flex>
       {/* Skills */}
       <div className="skills">
@@ -138,39 +115,9 @@ function About() {
         <Paragraph>{aboutSite.p2}</Paragraph>
         <Paragraph>{aboutSite.p3}</Paragraph>
         <Paragraph>{aboutSite.p4}</Paragraph>
-        <Title level={3}>Things I've Learned</Title>
-        <List
-          size="small"
-          itemLayout="horizontal"
-          dataSource={thingsIveLearned}
-          renderItem={(item) => (
-            <List.Item>
-              <List.Item.Meta description={item} />
-            </List.Item>
-          )}
-        />
-        <Title level={3}>Recognized Places to Improve</Title>
-        <List
-          size="small"
-          itemLayout="horizontal"
-          dataSource={recognizedPlacesToImprove}
-          renderItem={(item) => (
-            <List.Item>
-              <List.Item.Meta description={item} />
-            </List.Item>
-          )}
-        />
-        <Title level={3}>Works in Progress</Title>
-        <List
-          size="small"
-          itemLayout="horizontal"
-          dataSource={wips}
-          renderItem={(item) => (
-            <List.Item>
-              <List.Item.Meta description={item} />
-            </List.Item>
-          )}
-        />
+        <AboutSectionWithStandardList level={3} title="Things I've Learned" dataSource={thingsIveLearned} />
+        <AboutSectionWithStandardList level={3} title="Recognized Places to Improve" dataSource={recognizedPlacesToImprove} />
+        <AboutSectionWithStandardList level={3} title="Works in Progress" dataSource={wips} />
         {/* Modals */}
         <CustomModal
           title="Skills Description"
