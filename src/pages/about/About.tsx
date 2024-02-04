@@ -20,6 +20,7 @@ import AboutSectionWithStandardList from './AboutSectionWithStandardList';
 import { ProgressBadgeProvider, useProgressBadge } from './ProgressBadgeContext';
 import SkillsDescriptionModalChildren from './SkillsDescriptionModalChildren';
 import SkillTabList from './SkillTabList';
+import SpecificSkillDescriptionModalChildren from './SpecificSkillDescriptionModalChildren';
 const { Title, Paragraph } = Typography;
 
 const tabNames: Array<TabNames | 'All'> = [
@@ -37,10 +38,10 @@ const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
 }));
 
 function InternalAbout() {
-  const [isSkillsLegendModalVisible, setIsSkillsLegendModalVisible] =
+  const [isSkillsLegendModalOpen, setIsSkillsLegendModalOpen] =
     useState(false);
 
-  const { modalVisible, modalData, hideModal } = useProgressBadge(); 
+  const { modalOpen: modalVisible, modalData, hideModal } = useProgressBadge(); 
 
   const skillsRef = useRef<HTMLHeadingElement>(null);
 
@@ -62,11 +63,11 @@ function InternalAbout() {
   };
 
   const handleOpenSkillsLegendModal = () => {
-    setIsSkillsLegendModalVisible(true);
+    setIsSkillsLegendModalOpen(true);
   };
 
   const handleCloseSkillsLegendModal = () => {
-    setIsSkillsLegendModalVisible(false);
+    setIsSkillsLegendModalOpen(false);
   };
 
   return (
@@ -116,7 +117,7 @@ function InternalAbout() {
         {/* Modals */}
         <CustomModal
           title="Skills Description"
-          visible={isSkillsLegendModalVisible}
+          open={isSkillsLegendModalOpen}
           width={'90%'}
           onOk={handleCloseSkillsLegendModal}
           onCancel={handleCloseSkillsLegendModal}
@@ -126,13 +127,13 @@ function InternalAbout() {
         </CustomModal>
         <CustomModal
           title={modalData.title}
-          visible={modalVisible}
+          open={modalVisible}
           width={'90%'}
           onOk={hideModal}
           onCancel={hideModal}
           isFooterNull={true}
         >
-          <div>Specific Skill Details Modal</div>
+          <SpecificSkillDescriptionModalChildren />
         </CustomModal>
       </div>
     </div>

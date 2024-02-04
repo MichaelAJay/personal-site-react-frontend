@@ -1,6 +1,6 @@
 import { Card, Progress } from 'antd';
 import { SkillLevel } from './about-me-field-texts';
-import './ProgressBadge.css';
+import './ProgressBadgeDisplay.css';
 const { Meta } = Card;
 
 export interface IProgressBadgeProps {
@@ -9,6 +9,7 @@ export interface IProgressBadgeProps {
   dashPercent: number;
   description?: string;
   includeDescription?: boolean;
+  levelAssessmentReason: string;
 }
 
 // const skillLevelToPercentMap: Record<SkillLevel, number> = {
@@ -27,13 +28,13 @@ export const conicColors = {
   '80%': '#6a0dad',
 };
 
-function ProgressBadge({
+function ProgressBadgeDisplay({
   level,
   title,
   dashPercent,
   description,
   includeDescription,
-}: IProgressBadgeProps) {
+}: Omit<IProgressBadgeProps, 'levelAssessmentReason'>) {
   return (
     <Card
       className="progress-badge-card"
@@ -60,4 +61,4 @@ function ProgressBadge({
   );
 }
 
-export default ProgressBadge;
+export default ProgressBadgeDisplay;

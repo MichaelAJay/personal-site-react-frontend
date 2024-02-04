@@ -9,14 +9,14 @@ interface ModalData {
 }
 
 interface ProgressBadgeContextType {
-    modalVisible: boolean;
+    modalOpen: boolean;
     modalData: ModalData;
     showModal: (data: ModalData) => void;
     hideModal: () => void;
 }
 
 const defaultState: ProgressBadgeContextType = {
-    modalVisible: false,
+    modalOpen: false,
     modalData: { 
         dashPercent: 50,
         level: 'Intermediate',
@@ -36,20 +36,21 @@ interface ProgressBadgeProviderProps {
 }
 
 export const ProgressBadgeProvider: React.FC<ProgressBadgeProviderProps> = ({ children }) => {
-    const [modalVisible, setModalVisible] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState<ModalData>(defaultState.modalData);
 
     const showModal = (data: ModalData) => {
+        console.log('showModal data', data)
         setModalData(data);
-        setModalVisible(true);
+        setModalOpen(true);
     }
 
     const hideModal = () => {
-        setModalVisible(false);
+        setModalOpen(false);
     }
 
     return (
-        <ProgressBadgeContext.Provider value={{ modalVisible, modalData, showModal, hideModal }}>
+        <ProgressBadgeContext.Provider value={{ modalOpen: modalOpen, modalData, showModal, hideModal }}>
             { children }
         </ProgressBadgeContext.Provider>
     );

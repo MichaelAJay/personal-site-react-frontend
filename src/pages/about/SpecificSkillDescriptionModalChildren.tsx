@@ -1,37 +1,30 @@
 import { Progress, Typography } from "antd";
-import ProgressBadge, { conicColors, IProgressBadgeProps } from "./ProgressBadge";
-import { ProgressBadgeProvider, useProgressBadge } from "./ProgressBadgeContext";
-const { Paragraph } = Typography;
+import { conicColors } from "./ProgressBadgeDisplay";
+import { useProgressBadge } from "./ProgressBadgeContext";
+const { Paragraph, Title } = Typography;
 
 
 /**
  * (Obviously) needs a rename
  */
-function InnerSpecificSkillDescriptionModalChildren() {
+function SpecificSkillDescriptionModalChildren() {
     const { modalData } = useProgressBadge();
+    console.log('In InnerSpecificSkillDescriptionModalChildren', modalData)
 
     return (
-        /**
-         * Should include the title (which actually comes from the CustomModal title prop - not needed here)
-         * Should include the Progress Badge props, essentially
-         */
         <>
             <Progress
                 type="dashboard"
                 percent={modalData.dashPercent}
+                format={() => 'Done'}
                 showInfo={false}
                 strokeColor={conicColors}
             />
+            <Title level={5}>{modalData.level}</Title>
             <Paragraph>{modalData.levelAssessmentReason}</Paragraph>
         </>
     )
 };
 
 
-export default function SpecificSkillDescriptionModalChildren() {
-    return (
-        <ProgressBadgeProvider>
-            <InnerSpecificSkillDescriptionModalChildren />
-        </ProgressBadgeProvider>
-    )
-};
+export default SpecificSkillDescriptionModalChildren;
