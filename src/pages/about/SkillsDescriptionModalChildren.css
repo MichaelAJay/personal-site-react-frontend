@@ -1,7 +1,12 @@
-.ant-card.skill-level-badge .ant-card-body {
-    padding: 24px 12px;
+.skills-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
-.skills-description-list-item {
-    height: 320px;
+.skills-grid-item {
+    display: flex;
+    flex-direction: column;
 }

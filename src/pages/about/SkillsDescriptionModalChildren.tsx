@@ -15,17 +15,12 @@ for (const property in skillLevel) {
 
 function SkillsDescriptionModalChildren() {
     return (
-        <div>
-            <List
-                grid={{ gutter: 16, column: 5 }}
-                size="small"
-                dataSource={mappedSkillLevels}
-                renderItem={item => (
-                    <List.Item className="skills-description-list-item">
-                        <ProgressBadge {...item} includeDescription={true} />
-                    </List.Item>
-                )}
-            />
+        <div className="skills-grid-container">
+            {mappedSkillLevels.map((item, index) => (
+                <div className="skills-grid-item">
+                    <ProgressBadge {...item} includeDescription={true} />
+                </div>
+            ))}
         </div>
     )
 };
