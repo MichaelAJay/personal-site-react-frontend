@@ -5,7 +5,6 @@ function InteractiveProgressBadge(props: IProgressBadgeProps) {
     const { showModal } = useProgressBadge();
 
     const handleClick = () => {
-        console.log('clicky clicky', props);
         showModal({
             dashPercent: props.dashPercent,
             level: props.level,

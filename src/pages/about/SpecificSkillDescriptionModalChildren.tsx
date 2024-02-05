@@ -3,13 +3,13 @@ import { conicColors } from "./ProgressBadgeDisplay";
 import { useProgressBadge } from "./ProgressBadgeContext";
 const { Paragraph, Title } = Typography;
 
+const DEFAULT_LEVEL_ASSESSMENT_REASON = "I'm working on adding my reasoning - stay tuned!";
 
 /**
  * (Obviously) needs a rename
  */
 function SpecificSkillDescriptionModalChildren() {
     const { modalData } = useProgressBadge();
-    console.log('In InnerSpecificSkillDescriptionModalChildren', modalData)
 
     return (
         <>
@@ -21,7 +21,7 @@ function SpecificSkillDescriptionModalChildren() {
                 strokeColor={conicColors}
             />
             <Title level={5}>{modalData.level}</Title>
-            <Paragraph>{modalData.levelAssessmentReason}</Paragraph>
+            <Paragraph>{modalData.levelAssessmentReason || DEFAULT_LEVEL_ASSESSMENT_REASON}</Paragraph>
         </>
     )
 };
