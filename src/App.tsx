@@ -12,14 +12,15 @@ import Signup from './pages/auth/signup';
 import { isUserAdmin } from './utils/functions/is-user-admin.function';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
-import Contact from './pages/contact/Contact';
+// import Contact from './pages/contact/Contact';
 import SierpinksiTriangle from './pages/oddities/Sierpinski';
 import { getEnvVar } from './utils/functions/get-env-var.function';
 const { Content } = Layout;
 
 function App() {
   const [currentPage, setCurrentPage] = useState('');
-  const basename = getEnvVar('NODE_ENV') === 'production' ? process.env.PUBLIC_URL : '';
+  const basename =
+    getEnvVar('NODE_ENV') === 'production' ? process.env.PUBLIC_URL : '';
 
   return (
     <Router basename={basename}>
@@ -44,7 +45,7 @@ function App() {
                     path={ROUTES.ODDITIES.OTHER}
                     element={<OtherOddity />}
                   />
-                  <Route path={ROUTES.CONTACT} element={<Contact />} />
+                  {/* <Route path={ROUTES.CONTACT} element={<Contact />} /> */}
                   {isUserAdmin() && (
                     <Route
                       path={ROUTES.ADMIN.MESSAGES}

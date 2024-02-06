@@ -86,7 +86,11 @@ function InternalAbout() {
           <Paragraph>{AboutMe.professionalJourney}</Paragraph>
           {/* <AboutSectionWithStandardList level={3} title="Interests" dataSource={aboutMeInterests} /> */}
         </div>
-        <img className="headshot" alt="My headshot" src={`${process.env.PUBLIC_URL}/mjay_headshot_hex_transparentbg.png`} />
+        <img
+          className="headshot"
+          alt="My headshot"
+          src={`${process.env.PUBLIC_URL}/mjay_headshot_hex_transparentbg.png`}
+        />
       </Flex>
       {/* Attributes */}
       <Flex justify={'space-around'} align={'start'}>
@@ -103,7 +107,7 @@ function InternalAbout() {
       </Flex>
       {/* Skills */}
       <div className="skills">
-        <Flex align='center' justify='space-between'>
+        <Flex align="center" justify="space-between">
           <Title ref={skillsRef} level={3}>
             Technical Skills
           </Title>

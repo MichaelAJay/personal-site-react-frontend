@@ -16,7 +16,7 @@ function InteractiveProgressBadge(props: IProgressBadgeProps) {
   };
 
   return (
-    <div onClick={handleClick}>
+    <div style={{ height: '100%' }} onClick={handleClick}>
       <ProgressBadgeDisplay {...props} />
     </div>
   );

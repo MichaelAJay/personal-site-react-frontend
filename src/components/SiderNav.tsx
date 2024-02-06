@@ -3,7 +3,7 @@ import { odditiesSiderItems } from '../pages/oddities/oddities-sider-items';
 import { Layout } from 'antd';
 import { adminSiderItems } from '../pages/admin/admin-sider-items';
 import { useLocation } from 'react-router-dom';
-import Navigator from './Navigator'
+import Navigator from './Navigator';
 const { Sider } = Layout;
 
 const getItems = (currentPage: string) => {

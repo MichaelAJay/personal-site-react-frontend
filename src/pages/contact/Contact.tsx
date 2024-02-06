@@ -23,17 +23,17 @@ function Contact() {
 
     // Clear existing timeouts if they are set
     if (fadeOutTimeoutRef.current) {
-        clearTimeout(fadeOutTimeoutRef.current);
-        }
-        if (dismissTimeoutRef.current) {
-        clearTimeout(dismissTimeoutRef.current);
-        }
+      clearTimeout(fadeOutTimeoutRef.current);
+    }
+    if (dismissTimeoutRef.current) {
+      clearTimeout(dismissTimeoutRef.current);
+    }
 
     fadeOutTimeoutRef.current = setTimeout(() => {
-        setIsErrorAlertVisible(false);
-        dismissTimeoutRef.current = setTimeout(() => setError(null), 500);
+      setIsErrorAlertVisible(false);
+      dismissTimeoutRef.current = setTimeout(() => setError(null), 500);
     }, 5000);
-  }
+  };
 
   return (
     <div className="contact-container">
@@ -48,7 +48,10 @@ function Contact() {
           <Paragraph>{CONTENT_6}</Paragraph>
         </div>
         <div className="contact-form-outer-container">
-          <ContactForm className="contact-form-container" onError={handleError} />
+          <ContactForm
+            className="contact-form-container"
+            onError={handleError}
+          />
         </div>
       </Flex>
       {isErrorAlertVisible && (
@@ -63,7 +66,7 @@ function Contact() {
             top: '10px',
             zIndex: 1000,
             height: '50px',
-            transform: 'translateX(-50%)'
+            transform: 'translateX(-50%)',
           }}
         />
       )}
