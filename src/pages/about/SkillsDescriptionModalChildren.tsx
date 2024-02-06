@@ -18,9 +18,9 @@ for (const property in skillLevel) {
 
 function SkillsDescriptionModalChildren() {
   return (
-    <div className="skills-grid-container">
+    <div className="skills-description-grid-container">
       {mappedSkillLevels.map((item, index) => (
-        <div className="skills-grid-item">
+        <div key={index} className="skills-description-grid-item">
           <ProgressBadgeDisplay {...item} includeDescription={true} />
         </div>
       ))}

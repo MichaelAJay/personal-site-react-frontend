@@ -19,7 +19,8 @@ const { Content } = Layout;
 
 function App() {
   const [currentPage, setCurrentPage] = useState('');
-  const basename = getEnvVar('NODE_ENV') === 'production' ? process.env.PUBLIC_URL : '';
+  const basename =
+    getEnvVar('NODE_ENV') === 'production' ? process.env.PUBLIC_URL : '';
 
   return (
     <Router basename={basename}>

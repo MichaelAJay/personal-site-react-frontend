@@ -5,14 +5,20 @@ import './Contact.css';
 
 const MAX_MESSAGE_CHARS = 100;
 
-function ContactForm({ className, onError }: { className: string; onError: (message: string) => void }) {
+function ContactForm({
+  className,
+  onError,
+}: {
+  className: string;
+  onError: (message: string) => void;
+}) {
   const [form]: Array<FormInstance<PostContactForm>> = Form.useForm();
 
   const onFinish = async (values: any) => {
     try {
       await postContactForm(values);
     } catch (err) {
-      const postfix = 'Form was not processed'
+      const postfix = 'Form was not processed';
       if (err instanceof Error) {
         onError(`${err.message}: ${postfix}`);
       } else {

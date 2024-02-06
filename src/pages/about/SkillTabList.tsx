@@ -1,7 +1,8 @@
-import { List } from 'antd';
+import { useMemo } from 'react';
 import { TabNames } from './about-me-field-texts';
 import InteractiveProgressBadge from './InteractiveProgressBadge';
 import { IProgressBadgeProps } from './ProgressBadgeDisplay';
+import './SkillTabList.css';
 
 export type SkillTabItemProps = {
   tabName: TabNames | 'All';
@@ -9,20 +10,21 @@ export type SkillTabItemProps = {
 };
 
 function SkillTabList({ tabName, arr }: SkillTabItemProps) {
+  const items = useMemo(() => {
+    if (tabName === 'All') {
+      return arr;
+    }
+    return arr.filter((item) => item.tabs.has(tabName));
+  }, [arr, tabName]);
+
   return (
-    <List
-      grid={{ gutter: 16, column: 4 }}
-      size="small"
-      itemLayout="horizontal"
-      dataSource={
-        tabName === 'All' ? arr : arr.filter((tech) => tech.tabs.has(tabName))
-      }
-      renderItem={(item) => (
-        <List.Item style={{ borderBottom: 0 }}>
+    <div className="skills-grid-container">
+      {items.map((item, index) => (
+        <div key={index} className="skills-grid-item">
           <InteractiveProgressBadge {...item} />
-        </List.Item>
-      )}
-    />
+        </div>
+      ))}
+    </div>
   );
 }
 

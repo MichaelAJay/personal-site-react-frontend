@@ -1,10 +1,10 @@
 .progress-and-level-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .progress-level-title {
-    margin-top: 0px;
+  margin-top: 0px;
 }

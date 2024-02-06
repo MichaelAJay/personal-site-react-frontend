@@ -27,7 +27,11 @@ function CustomModal({
     ...(isFooterNull ? { footer: null } : {}),
   };
 
-  return <Modal className='modal-container' {...modalProps}>{children}</Modal>;
+  return (
+    <Modal className="modal-container" {...modalProps}>
+      {children}
+    </Modal>
+  );
 }
 
 export default CustomModal;
