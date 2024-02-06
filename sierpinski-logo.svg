@@ -1,0 +1,11 @@
+<svg width="68pt" height="58.89pt" viewBox="0 0 68 58.89"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="scale(1, -1) translate(0, -58.89)">
+        <path d="M0,0L68,0L34,58.89L0,0" style="fill:none;stroke:#000000" />
+        <path d="M34,0L51,29.445L17,29.445Z"  />
+        <path d="M17,0L25.5,14.722L8.5,14.722Z"  />
+        <path d="M51,0L42.5,14.722L59.5,14.722Z"  />
+        <path d="M42.5,44.167L34,29.445L25.5,44.167Z"  />
+    </g>
+</svg>
