@@ -2,6 +2,7 @@ import { Progress, Tooltip, Typography } from 'antd';
 import { conicColors } from './ProgressBadgeDisplay';
 import { useProgressBadge } from './ProgressBadgeContext';
 import { skillLevel } from './about-me-field-texts';
+import './SpecificSkillDescriptionModalChildren.css'
 const { Paragraph, Title } = Typography;
 
 const DEFAULT_LEVEL_ASSESSMENT_REASON =
@@ -15,19 +16,21 @@ function SpecificSkillDescriptionModalChildren() {
 
   return (
     <>
-      <Progress
-        type="dashboard"
-        percent={modalData.dashPercent}
-        format={() => 'Done'}
-        showInfo={false}
-        strokeColor={conicColors}
-      />
-      <Tooltip
-        title={skillLevel[modalData.level]['description']}
-        placement="topLeft"
-      >
-        <Title level={5}>{modalData.level}</Title>
-      </Tooltip>
+      <div className='progress-and-level-container'>
+        <Progress
+          type="dashboard"
+          percent={modalData.dashPercent}
+          format={() => 'Done'}
+          showInfo={false}
+          strokeColor={conicColors}
+        />
+        <Tooltip
+          title={skillLevel[modalData.level]['description']}
+          placement="topLeft"
+        >
+          <Title className='progress-level-title' level={5}>{modalData.level}</Title>
+        </Tooltip>
+      </div>
       <Paragraph>
         {modalData.levelAssessmentReason || DEFAULT_LEVEL_ASSESSMENT_REASON}
       </Paragraph>

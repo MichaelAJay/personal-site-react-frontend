@@ -72,6 +72,9 @@ function InternalAbout() {
     setIsSkillsLegendModalOpen(false);
   };
 
+  const hs1 = '/mjay_headshot.jpeg';
+  const hs2 = '/mjay_headshot_hex_transparentbg.png';
+
   return (
     <div className="about-container">
       <Flex justify={'space-between'} align={'start'}>
@@ -86,7 +89,7 @@ function InternalAbout() {
           <Paragraph>{AboutMe.professionalJourney}</Paragraph>
           {/* <AboutSectionWithStandardList level={3} title="Interests" dataSource={aboutMeInterests} /> */}
         </div>
-        <img className="headshot" alt="My headshot" src={`${process.env.PUBLIC_URL}/mjay_headshot.jpeg`} />
+        <img className="headshot" alt="My headshot" src={`${process.env.PUBLIC_URL}${hs2}`} />
       </Flex>
       {/* Attributes */}
       <Flex justify={'space-around'} align={'start'}>
@@ -150,7 +153,7 @@ function InternalAbout() {
         <CustomModal
           title={modalData.title}
           open={modalVisible}
-          width={'90%'}
+          // width={'90%'}
           onOk={hideModal}
           onCancel={hideModal}
           isFooterNull={true}
