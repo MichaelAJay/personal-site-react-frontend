@@ -1,6 +1,7 @@
 {
   "name": "personal-site-react-frontend",
   "version": "0.1.0",
+  "homepage": "https://MichaelAJay.github.io/personal-site-react-frontend",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
@@ -50,6 +51,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/dompurify": "^3.0.5",
+    "gh-pages": "^6.1.1",
     "prettier": "^3.2.5"
   }
 }
