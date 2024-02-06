@@ -72,8 +72,6 @@ function InternalAbout() {
     setIsSkillsLegendModalOpen(false);
   };
 
-  const hs2 = '/mjay_headshot_hex_transparentbg.png';
-
   return (
     <div className="about-container">
       <Flex justify={'space-between'} align={'start'}>
@@ -88,7 +86,7 @@ function InternalAbout() {
           <Paragraph>{AboutMe.professionalJourney}</Paragraph>
           {/* <AboutSectionWithStandardList level={3} title="Interests" dataSource={aboutMeInterests} /> */}
         </div>
-        <img className="headshot" alt="My headshot" src={`${process.env.PUBLIC_URL}${hs2}`} />
+        <img className="headshot" alt="My headshot" src={`${process.env.PUBLIC_URL}/mjay_headshot_hex_transparentbg.png`} />
       </Flex>
       {/* Attributes */}
       <Flex justify={'space-around'} align={'start'}>
