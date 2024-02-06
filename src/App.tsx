@@ -19,11 +19,7 @@ const { Content } = Layout;
 
 function App() {
   const [currentPage, setCurrentPage] = useState('');
-  console.log('REACT_APP_ENV', getEnvVar('REACT_APP_ENV'))
-  console.log('REACT_APP_ENV is local', getEnvVar('REACT_APP_ENV') === 'local')
-  console.log('publicUrl', process.env.PUBLIC_URL)
-  const basename = getEnvVar('REACT_APP_ENV') === 'local' ? '' : process.env.PUBLIC_URL;
-  console.log('basename', basename)
+  const basename = getEnvVar('NODE_ENV') === 'production' ? process.env.PUBLIC_URL : '';
 
   return (
     <Router basename={basename}>
