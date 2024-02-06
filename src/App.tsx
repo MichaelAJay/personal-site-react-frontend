@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SierpinksiTriangle from './pages/oddities/Sierpinski';
 import { Affix, Layout } from 'antd';
 import { ROUTES } from './utils/constants/routes.constant';
 import SiderNav from './components/SiderNav';
-import OtherOddity from './pages/oddities/other-oddity';
+import OtherOddity from './pages/oddities/OtherOddity';
 import Login from './pages/auth/login';
 import MessageViewer from './pages/admin/MessageViewer';
 import CustomHeader from './components/CustomHeader';
@@ -14,6 +13,7 @@ import { isUserAdmin } from './utils/functions/is-user-admin.function';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
+import SierpinksiTriangle from './pages/oddities/Sierpinski';
 const { Content } = Layout;
 
 function App() {
