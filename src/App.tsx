@@ -30,8 +30,8 @@ function App() {
         <Layout>
           <SiderNav onNavigate={setCurrentPage} currentPage={currentPage} />
 
-          <Layout className="App-layout-content">
-            <Content className="app-content">
+          <Layout className="app-layout-content">
+            <Content>
               <div>
                 <Routes>
                   <Route path={ROUTES.HOME} element={<Home />} />

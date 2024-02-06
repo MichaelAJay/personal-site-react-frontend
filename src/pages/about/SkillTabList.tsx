@@ -18,7 +18,7 @@ function SkillTabList({ tabName, arr }: SkillTabItemProps) {
         tabName === 'All' ? arr : arr.filter((tech) => tech.tabs.has(tabName))
       }
       renderItem={(item) => (
-        <List.Item>
+        <List.Item style={{ borderBottom: 0 }}>
           <InteractiveProgressBadge {...item} />
         </List.Item>
       )}

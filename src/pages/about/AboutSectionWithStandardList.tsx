@@ -20,7 +20,7 @@ function AboutSectionWithStandardList({
         itemLayout="horizontal"
         dataSource={dataSource}
         renderItem={(item) => (
-          <List.Item>
+          <List.Item style={{ borderBottom: 0 }}>
             <List.Item.Meta description={item} />
           </List.Item>
         )}

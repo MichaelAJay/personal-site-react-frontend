@@ -103,16 +103,19 @@ function InternalAbout() {
       </Flex>
       {/* Skills */}
       <div className="skills">
-        <Title level={3}>Skills</Title>
-        <Title ref={skillsRef} level={4}>
-          Technical
-        </Title>
-        <Button
-          type="primary"
-          shape="circle"
-          icon={<QuestionCircleOutlined />}
-          onClick={handleOpenSkillsLegendModal}
-        />
+        <Flex align='center' justify='space-between'>
+          <Title ref={skillsRef} level={3}>
+            Technical Skills
+          </Title>
+          <div style={{ paddingRight: '20px' }}>
+            <Button
+              type="primary"
+              shape="circle"
+              icon={<QuestionCircleOutlined />}
+              onClick={handleOpenSkillsLegendModal}
+            />
+          </div>
+        </Flex>
         <Tabs defaultActiveKey="1" items={tabs} onChange={onChangeTab} />
       </div>
       <div className="about-site-container">

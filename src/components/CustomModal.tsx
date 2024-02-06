@@ -1,4 +1,5 @@
 import { Modal } from 'antd';
+import './CustomModal.css';
 
 function CustomModal({
   title,
@@ -26,7 +27,7 @@ function CustomModal({
     ...(isFooterNull ? { footer: null } : {}),
   };
 
-  return <Modal {...modalProps}>{children}</Modal>;
+  return <Modal className='modal-container' {...modalProps}>{children}</Modal>;
 }
 
 export default CustomModal;
