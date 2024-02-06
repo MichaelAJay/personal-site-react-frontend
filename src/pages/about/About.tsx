@@ -17,7 +17,10 @@ import {
 } from './about-site-field-texts';
 import './About.css';
 import AboutSectionWithStandardList from './AboutSectionWithStandardList';
-import { ProgressBadgeProvider, useProgressBadge } from './ProgressBadgeContext';
+import {
+  ProgressBadgeProvider,
+  useProgressBadge,
+} from './ProgressBadgeContext';
 import SkillsDescriptionModalChildren from './SkillsDescriptionModalChildren';
 import SkillTabList from './SkillTabList';
 import SpecificSkillDescriptionModalChildren from './SpecificSkillDescriptionModalChildren';
@@ -38,10 +41,9 @@ const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
 }));
 
 function InternalAbout() {
-  const [isSkillsLegendModalOpen, setIsSkillsLegendModalOpen] =
-    useState(false);
+  const [isSkillsLegendModalOpen, setIsSkillsLegendModalOpen] = useState(false);
 
-  const { modalOpen: modalVisible, modalData, hideModal } = useProgressBadge(); 
+  const { modalOpen: modalVisible, modalData, hideModal } = useProgressBadge();
 
   const skillsRef = useRef<HTMLHeadingElement>(null);
 
@@ -88,8 +90,16 @@ function InternalAbout() {
       </Flex>
       {/* Attributes */}
       <Flex justify={'space-around'} align={'start'}>
-        <AboutSectionWithStandardList level={3} title="Professional Attributes" dataSource={aboutMeProfessionalAttributes} />
-        <AboutSectionWithStandardList level={3} title="Personal Attributes" dataSource={aboutMePersonalAttributes} />
+        <AboutSectionWithStandardList
+          level={3}
+          title="Professional Attributes"
+          dataSource={aboutMeProfessionalAttributes}
+        />
+        <AboutSectionWithStandardList
+          level={3}
+          title="Personal Attributes"
+          dataSource={aboutMePersonalAttributes}
+        />
       </Flex>
       {/* Skills */}
       <div className="skills">
@@ -111,9 +121,21 @@ function InternalAbout() {
         <Paragraph>{aboutSite.p2}</Paragraph>
         <Paragraph>{aboutSite.p3}</Paragraph>
         <Paragraph>{aboutSite.p4}</Paragraph>
-        <AboutSectionWithStandardList level={3} title="Things I've Learned" dataSource={thingsIveLearned} />
-        <AboutSectionWithStandardList level={3} title="Recognized Places to Improve" dataSource={recognizedPlacesToImprove} />
-        <AboutSectionWithStandardList level={3} title="Works in Progress" dataSource={wips} />
+        <AboutSectionWithStandardList
+          level={3}
+          title="Things I've Learned"
+          dataSource={thingsIveLearned}
+        />
+        <AboutSectionWithStandardList
+          level={3}
+          title="Recognized Places to Improve"
+          dataSource={recognizedPlacesToImprove}
+        />
+        <AboutSectionWithStandardList
+          level={3}
+          title="Works in Progress"
+          dataSource={wips}
+        />
         {/* Modals */}
         <CustomModal
           title="Skills Description"
@@ -146,7 +168,7 @@ export default function About() {
     <ProgressBadgeProvider>
       <InternalAbout />
     </ProgressBadgeProvider>
-  )
+  );
 }
 
 /**

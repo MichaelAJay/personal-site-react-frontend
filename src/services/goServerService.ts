@@ -1,5 +1,6 @@
-import axios from 'axios';
+import axios, { AxiosError, isAxiosError } from 'axios';
 import { ENV } from '../utils/constants/env.constant';
+import { NetworkError } from './api/custom_errors/Network_Error';
 import { LoginForm } from './api/goServer/request/login-form';
 import { PostContactForm } from './api/goServer/request/post-contact-form';
 import { SignupForm } from './api/goServer/request/signup-form';
@@ -30,7 +31,9 @@ export const postContactForm = async (form: PostContactForm): Promise<any> => {
     const response = await apiClient.post('contact', form);
     return response.data;
   } catch (err) {
-    console.error('Error posting contact form', err);
+    if (isAxiosError(err) && err.code === AxiosError.ERR_NETWORK) {
+      throw new NetworkError('Network error');
+    }
     throw err;
   }
 };

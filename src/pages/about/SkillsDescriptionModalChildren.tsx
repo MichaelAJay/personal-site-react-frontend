@@ -1,8 +1,12 @@
 import { SkillLevel, skillLevel } from './about-me-field-texts';
-import ProgressBadgeDisplay, { IProgressBadgeProps } from './ProgressBadgeDisplay';
+import ProgressBadgeDisplay, {
+  IProgressBadgeProps,
+} from './ProgressBadgeDisplay';
 import './SkillsDescriptionModalChildren.css';
 
-const mappedSkillLevels: Array<Omit<IProgressBadgeProps, 'levelAssessmentReason'>> = [];
+const mappedSkillLevels: Array<
+  Omit<IProgressBadgeProps, 'levelAssessmentReason'>
+> = [];
 for (const property in skillLevel) {
   mappedSkillLevels.push({
     level: skillLevel[property as SkillLevel]['name'],

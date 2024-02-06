@@ -1,28 +1,28 @@
 import { Button, Form, FormInstance, Input } from 'antd';
 import { PostContactForm } from '../../services/api/goServer/request/post-contact-form';
 import { postContactForm } from '../../services/goServerService';
-import './ContactForm.css';
+import './Contact.css';
 
 const MAX_MESSAGE_CHARS = 100;
 
-function ContactForm() {
+function ContactForm({ className, onError }: { className: string; onError: (message: string) => void }) {
   const [form]: Array<FormInstance<PostContactForm>> = Form.useForm();
 
   const onFinish = async (values: any) => {
     try {
       await postContactForm(values);
     } catch (err) {
-      console.error('Error posting contact form', err);
+      const postfix = 'Form was not processed'
+      if (err instanceof Error) {
+        onError(`${err.message}: ${postfix}`);
+      } else {
+        onError(`An unexpected error occurred: ${postfix}`);
+      }
     }
   };
 
   return (
-    <Form
-      className="contact-form-container"
-      form={form}
-      name="contact"
-      onFinish={onFinish}
-    >
+    <Form className={className} form={form} name="contact" onFinish={onFinish}>
       <Form.Item
         name="name"
         label="Name"

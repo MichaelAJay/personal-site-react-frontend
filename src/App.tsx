@@ -42,7 +42,7 @@ function App() {
                     path={ROUTES.ODDITIES.OTHER}
                     element={<OtherOddity />}
                   />
-                  <Route path={ROUTES.CONTACT} element={<Contact/>} />
+                  <Route path={ROUTES.CONTACT} element={<Contact />} />
                   {isUserAdmin() && (
                     <Route
                       path={ROUTES.ADMIN.MESSAGES}

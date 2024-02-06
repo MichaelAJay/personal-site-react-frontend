@@ -34,5 +34,6 @@ export const wips = [
   'The animation which occurs when navigating from a section with a side navigation panel to one without',
   'Changing the scrollbar color',
   'Responsive design - especially the "Skills Description" modal',
-  'Skill badges - implement database storage and API retrieval'
+  'Skill badges - implement database storage and API retrieval',
+  'Error notification beautification',
 ];

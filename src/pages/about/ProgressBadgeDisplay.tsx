@@ -13,11 +13,11 @@ export interface IProgressBadgeProps {
 }
 
 // const skillLevelToPercentMap: Record<SkillLevel, number> = {
-    // Beginner: 10, // [10, 29]
-    // Novice: 30, // [30, 49]
-    // Intermediate: 50, // [50-69]
-    // Advanced: 70, // [70-89]
-    // Expert: 90, // [90-100]
+// Beginner: 10, // [10, 29]
+// Novice: 30, // [30, 49]
+// Intermediate: 50, // [50-69]
+// Advanced: 70, // [70-89]
+// Expert: 90, // [90-100]
 // }
 
 export const conicColors = {
