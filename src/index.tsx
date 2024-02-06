@@ -58,6 +58,10 @@ const theme = {
       itemColor: colorAliases.mountainLight,
       itemBg: colors.transparent,
     },
+    Modal: {
+      contentBg: colorAliases.mountainLight,
+      headerBg: colorAliases.mountainLight,
+    },
   },
 };
 

@@ -21,7 +21,7 @@ function HomeSkillSectionContent(args: HomeSkillSectionContentArgs) {
         itemLayout="horizontal"
         dataSource={args.items}
         renderItem={(item: HomeSkillSectionContentListItem) => (
-          <List.Item>
+          <List.Item style={{ borderBottom: 0 }}>
             <List.Item.Meta title={item.title} description={item.description} />
           </List.Item>
         )}

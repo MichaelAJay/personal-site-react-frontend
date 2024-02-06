@@ -39,7 +39,8 @@
 
 :root {
   --treedarkgreen: #31474f;
-  --lightgreen: #a2b4a9;
+  /* --lightgreen: #a2b4a9; */
+  --lightgreen: 162, 180, 169;
   --darkgreen: #32454c;
   --sandbrown: #a8a58c;
   --darksand: #aba58e;
@@ -57,16 +58,6 @@
   min-height: 100vh;
 }
 
-.App-layout-content {
-  /* for some reason, when the two properties below are used, it throws off the other content */
-  /* align-items: center;
-  justify-content: center; */
-  /* padding: 10px; */
-  background-color: var(--testBlue);
-}
-
-.app-content {
-  background-color: var(--mountainlight);
-  border-radius: 10px;
-  /* padding: 10px; */
+.app-layout-content {
+  background-color: var(--treedarkgreen);
 }

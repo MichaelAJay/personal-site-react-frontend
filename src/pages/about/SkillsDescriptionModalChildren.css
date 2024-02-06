@@ -4,6 +4,7 @@
   gap: 16px;
   justify-content: space-between;
   align-items: stretch;
+  /* background-color: var(--testBlue); */
 }
 
 .skills-grid-item {
