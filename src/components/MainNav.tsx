@@ -1,5 +1,5 @@
 import {
-  // CommentOutlined,
+  CommentOutlined,
   ExperimentOutlined,
   EyeOutlined,
   HomeOutlined,
@@ -21,11 +21,11 @@ const itemsWithoutAdmin: MenuProps['items'] = [
     key: ROUTES.ABOUT,
     icon: <RocketOutlined />,
   },
-  // {
-  //   label: 'Contact',
-  //   key: ROUTES.CONTACT,
-  //   icon: <CommentOutlined />,
-  // },
+  {
+    label: 'Contact',
+    key: ROUTES.CONTACT,
+    icon: <CommentOutlined />,
+  },
   {
     label: 'Oddities',
     key: ROUTES.ODDITIES.SIERPINSKI,
