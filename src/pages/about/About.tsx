@@ -72,7 +72,6 @@ function InternalAbout() {
     setIsSkillsLegendModalOpen(false);
   };
 
-  // const hs1 = '/mjay_headshot.jpeg'; // Is this breaking things
   const hs2 = '/mjay_headshot_hex_transparentbg.png';
 
   return (
