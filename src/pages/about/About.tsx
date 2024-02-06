@@ -86,7 +86,7 @@ function InternalAbout() {
           <Paragraph>{AboutMe.professionalJourney}</Paragraph>
           {/* <AboutSectionWithStandardList level={3} title="Interests" dataSource={aboutMeInterests} /> */}
         </div>
-        <img className="headshot" alt="My headshot" src="/mjay_headshot.jpeg" />
+        <img className="headshot" alt="My headshot" src={`${process.env.PUBLIC_URL}/mjay_headshot.jpeg`} />
       </Flex>
       {/* Attributes */}
       <Flex justify={'space-around'} align={'start'}>

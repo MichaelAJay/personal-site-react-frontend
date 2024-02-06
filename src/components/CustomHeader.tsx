@@ -17,14 +17,10 @@ function CustomHeader({ onNavigate }: { onNavigate: any }) {
       <div className="header-logo-container">
         <img
           className="header-logo"
-          src="/app-logo-400w.png"
+          src={`${process.env.PUBLIC_URL}/app-logo-400w.png`}
           alt="Logo - A mountain with a tree which suggests recursion"
         />
       </div>
-      {/* <Image
-            src="/app-logo-400w.png"
-            // width={600}
-          /> */}
       <MainNav onNavigate={onNavigate} />
       <Button className="header-login" onClick={handleLoginClick}>
         Login

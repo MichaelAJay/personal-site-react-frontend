@@ -11,7 +11,7 @@ function HomeSkillCard(props: HomeSkillCardContent) {
     <Card
       className="home-skill-card"
       onClick={handleClick}
-      cover={<img alt={props.imgAlt} src={props.imgSrc} />}
+      cover={<img alt={props.imgAlt} src={`${process.env.PUBLIC_URL}${props.imgSrc}`} />}
     >
       <Meta
         className="home-skill-card-meta"

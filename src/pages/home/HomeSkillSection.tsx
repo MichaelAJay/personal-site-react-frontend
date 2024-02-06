@@ -22,7 +22,7 @@ function HomeSkillSection(args: HomeSkillSectionArgs) {
           <img
             className="home-skill-img-left"
             alt={args.img.alt}
-            src={args.img.src}
+            src={`${process.env.PUBLIC_URL}${args.img.src}`}
           />
         )}
         <div
@@ -35,7 +35,7 @@ function HomeSkillSection(args: HomeSkillSectionArgs) {
           <img
             className="home-skill-img-right"
             alt={args.img.alt}
-            src={args.img.src}
+            src={`${process.env.PUBLIC_URL}${args.img.src}`}
           />
         )}
       </Flex>
