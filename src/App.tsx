@@ -14,13 +14,17 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import SierpinksiTriangle from './pages/oddities/Sierpinski';
+import { getEnvVar } from './utils/functions/get-env-var.function';
 const { Content } = Layout;
 
 function App() {
   const [currentPage, setCurrentPage] = useState('');
+  console.log('publicUrl', process.env.PUBLIC_URL)
+  const basename = getEnvVar('REACT_APP_ENV') === 'local' ? '' : process.env.PUBLIC_URL;
+  console.log('basename', basename)
 
   return (
-    <Router>
+    <Router basename={basename}>
       <Layout className="App-layout">
         <Affix>
           <CustomHeader onNavigate={setCurrentPage} />
