@@ -6,7 +6,7 @@ export function isUserAdmin(): boolean {
     console.log('no token in session storage');
 
     /** @TODO THIS SHOULD BE FALSE */
-    return true;
+    return false;
   }
   return false;
 
