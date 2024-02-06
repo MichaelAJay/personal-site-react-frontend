@@ -1,6 +1,4 @@
 function OtherOddity() {
-    return (
-        <div>Mysterious Oddity #2</div>
-    )
+  return <div>Mysterious Oddity #2</div>;
 }
-export default OtherOddity
+export default OtherOddity;

@@ -1,0 +1,19 @@
+.ant-card-cover > .progress-badge-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.ant-card-meta.progress-badge-meta .ant-card-meta-detail .ant-card-meta-title {
+  white-space: normal;
+  text-align: center;
+}
+
+.ant-card > .progress-badge-card-body {
+  padding: 24px 12px;
+}
+
+.progress-badge-card {
+  height: 100%;
+}

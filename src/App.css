@@ -39,10 +39,34 @@
 
 :root {
   --treedarkgreen: #31474f;
-  --backgroundwhite: #27210d;
   --lightgreen: #a2b4a9;
   --darkgreen: #32454c;
   --sandbrown: #a8a58c;
   --darksand: #aba58e;
   --rockbrown: #6e7170;
+  --mountainlight: #fffbed;
+  --testRed: #ff0000;
+  --testBlue: #00f;
+  --olivegreen: #806e19;
+  --lightredsand: #e09367;
+  --lightoceanblue: #46675f;
+  --lightoceanbluelite: #46675f40;
+}
+
+.App-layout {
+  min-height: 100vh;
+}
+
+.App-layout-content {
+  /* for some reason, when the two properties below are used, it throws off the other content */
+  /* align-items: center;
+  justify-content: center; */
+  /* padding: 10px; */
+  background-color: var(--testBlue);
+}
+
+.app-content {
+  background-color: var(--mountainlight);
+  border-radius: 10px;
+  /* padding: 10px; */
 }
