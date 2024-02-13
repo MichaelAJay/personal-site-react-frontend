@@ -2,7 +2,7 @@ import { Typography } from "antd";
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
 const { Paragraph } = Typography;
-const MSG_1 = 'The backend server is currently not reporting back as healthy. Please check this out again at a later time.'
+const MSG_1 = 'The backend server is currently not reporting back as healthy. Please check this out again at a later time. Please excuse this view - it\'s on my TODO list'
 
 
 function BackendUnavailable(props: { children: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) {

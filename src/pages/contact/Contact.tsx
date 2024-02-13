@@ -15,9 +15,21 @@ const CONTENT_6 = `Or email me directly: michael.a.jay@protonmail.com`;
 function Contact() {
   const [error, setError] = useState<string | null>(null);
   const [isErrorAlertVisible, setIsErrorAlertVisible] = useState(false);
+  const [formPostedMessage, setFormPostedMessage] = useState<string | null>(null);
+  const [isSuccessAlertVisible, setIsSuccessAlertVisible] = useState(false);
   const fadeOutTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const dismissTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const isBEHealthy = useBackendHealthCheck();
+
+  const handleSuccess = (message: string) => {
+    setFormPostedMessage(message);
+    setIsSuccessAlertVisible(true);
+
+    setTimeout(() => {
+      setIsSuccessAlertVisible(false);
+      setTimeout(() => setFormPostedMessage(null), 500)
+    }, 5000);
+  }
 
   const handleError = (message: string) => {
     setError(message);
@@ -54,6 +66,7 @@ function Contact() {
             className="contact-form-container"
             isHealthy={isBEHealthy}
             onError={handleError}
+            onSuccess={handleSuccess}
           />
         </div>
       </Flex>
@@ -62,6 +75,22 @@ function Contact() {
           className={isErrorAlertVisible ? 'alert-visible' : 'alert-hidden'}
           message={error}
           type="error"
+          showIcon
+          style={{
+            position: 'fixed',
+            left: '50%',
+            top: '10px',
+            zIndex: 1000,
+            height: '50px',
+            transform: 'translateX(-50%)',
+          }}
+        />
+      )}
+      {isSuccessAlertVisible && (
+        <Alert
+          className={isSuccessAlertVisible ? 'alert-visible' : 'alert-hidden'}
+          message={formPostedMessage}
+          type="success"
           showIcon
           style={{
             position: 'fixed',

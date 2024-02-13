@@ -10,16 +10,20 @@ function ContactForm({
   className,
   isHealthy,
   onError,
+  onSuccess,
 }: {
   className: string;
   isHealthy: boolean;
   onError: (message: string) => void;
+  onSuccess: (message: string) => void;
 }) {
   const [form]: Array<FormInstance<PostContactForm>> = Form.useForm();
 
   const onFinish = async (values: any) => {
     try {
       await postContactForm(values);
+      onSuccess('Message received - thanks for reaching out!');
+      form.resetFields();
     } catch (err) {
       const postfix = 'Form was not processed';
       if (err instanceof Error) {

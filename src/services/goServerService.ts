@@ -51,7 +51,15 @@ export const signUp = async (form: SignupForm): Promise<any> => {
 export const login = async (form: LoginForm): Promise<any> => {
   try {
     const response = await apiClient.post('sign-in', form);
-    return response.data;
+    const { data } = response;
+
+    if (data.token) {
+      console.log('We in here')
+      sessionStorage.setItem('at', data.token)
+    }
+
+    // return response.data;
+    return;
   } catch (err) {
     console.error('Error posting login form', err);
     throw err;

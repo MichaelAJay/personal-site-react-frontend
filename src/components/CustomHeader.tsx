@@ -13,7 +13,6 @@ function CustomHeader({ onNavigate }: { onNavigate: any }) {
 
   return (
     <Header className="header">
-      {/* <Header> */}
       <div className="header-logo-container">
         <img
           className="header-logo"

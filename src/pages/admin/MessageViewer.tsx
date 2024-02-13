@@ -59,7 +59,7 @@ function MessageViewer() {
     try {
       // Will need to handle selecting the read ones
       const data = await getMessages({});
-      setData(data);
+      setData(data.map((datum: any, index: any) => ({...datum, key: index})));
     } catch (err) {
       console.error(err);
     }
