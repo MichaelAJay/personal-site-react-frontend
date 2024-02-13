@@ -2,6 +2,7 @@ import { Alert, Flex, Typography } from 'antd';
 import ContactForm from './ContactForm';
 import './Contact.css';
 import { useRef, useState } from 'react';
+import { useBackendHealthCheck } from '../../hooks/backend-health-check';
 const { Paragraph, Title } = Typography;
 
 const CONTENT_1 = `Thanks for visiting my website! I'm currently looking for my next great fulltime web development opportunity. If you have one, I'd love to hear about it! Special note: I shine best as a backend developer, but am gaining confidence in the frontend.`;
@@ -16,6 +17,7 @@ function Contact() {
   const [isErrorAlertVisible, setIsErrorAlertVisible] = useState(false);
   const fadeOutTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const dismissTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isBEHealthy = useBackendHealthCheck();
 
   const handleError = (message: string) => {
     setError(message);
@@ -50,6 +52,7 @@ function Contact() {
         <div className="contact-form-outer-container">
           <ContactForm
             className="contact-form-container"
+            isHealthy={isBEHealthy}
             onError={handleError}
           />
         </div>

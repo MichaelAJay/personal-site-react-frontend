@@ -89,3 +89,12 @@ export const getMessage = async (
     throw err;
   }
 };
+
+export const healthCheck = async (): Promise<boolean> => {
+  try {
+    const response = await apiClient.get('/health');
+    return response.status === 200;
+  } catch (err) {
+    return false;
+  }
+}

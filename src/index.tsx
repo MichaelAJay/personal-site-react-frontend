@@ -17,6 +17,7 @@ export const colorAliases = {
   lightredsand: '#e09367',
   lightoceanblue: '#46675f',
   lightoceanbluelite: '#46675f70',
+  redtest: '#ff0000',
 };
 
 const colors = {
@@ -71,6 +72,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ConfigProvider theme={theme}>
+    {/* <ConfigProvider> */}
       <App />
     </ConfigProvider>
   </React.StrictMode>,

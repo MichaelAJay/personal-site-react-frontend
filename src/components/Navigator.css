@@ -21,5 +21,7 @@
 
 .sider-nav .ant-menu-item:hover {
   color: var(--darkgreen) !important;
-  background-color: var(--lightgreen) !important;
+  background-color: var(--mountainlight) !important;
+  /* color: var(--testBlue) !important;
+  background-color: var(--testRed) !important; */
 }

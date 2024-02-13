@@ -1,5 +1,8 @@
 .contact-container {
+  margin: 20px;
   padding: 24px 50px 24px 24px;
+  background-color: var(--mountainlight);
+  border-radius: 10px;
 }
 
 .contact-content {
