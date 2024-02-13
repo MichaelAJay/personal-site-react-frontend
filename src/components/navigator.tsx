@@ -31,7 +31,8 @@ function Navigator({
     let style: Record<string, any>;
     switch (mode) {
       case 'horizontal':
-        style = { flex: 1, minWidth: 0, color: colorAliases.darkGreen };
+        // style = { flex: 1, minWidth: 0, color: colorAliases.darkGreen };
+        style = { flex: 1, minWidth: 0, color: colorAliases.redtest };
         break;
       case 'vertical':
       case 'inline':
@@ -39,7 +40,7 @@ function Navigator({
         break;
       default:
         console.error(`Invalid mode ${mode}`);
-        style = { height: '100%', borderRight: 0 };
+        style = { height: '100%', borderRight: 0, color: colorAliases.redtest };
     }
     return style;
   };

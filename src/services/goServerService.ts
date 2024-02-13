@@ -51,7 +51,15 @@ export const signUp = async (form: SignupForm): Promise<any> => {
 export const login = async (form: LoginForm): Promise<any> => {
   try {
     const response = await apiClient.post('sign-in', form);
-    return response.data;
+    const { data } = response;
+
+    if (data.token) {
+      console.log('We in here')
+      sessionStorage.setItem('at', data.token)
+    }
+
+    // return response.data;
+    return;
   } catch (err) {
     console.error('Error posting login form', err);
     throw err;
@@ -89,3 +97,12 @@ export const getMessage = async (
     throw err;
   }
 };
+
+export const healthCheck = async (): Promise<boolean> => {
+  try {
+    const response = await apiClient.get('/health');
+    return response.status === 200;
+  } catch (err) {
+    return false;
+  }
+}

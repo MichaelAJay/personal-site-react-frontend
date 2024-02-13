@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Affix, Layout } from 'antd';
 import { ROUTES } from './utils/constants/routes.constant';
 import SiderNav from './components/SiderNav';
-import OtherOddity from './pages/oddities/OtherOddity';
-import Login from './pages/auth/login';
+// import OtherOddity from './pages/oddities/OtherOddity';
+import Login from './pages/auth/Login';
 import MessageViewer from './pages/admin/MessageViewer';
 import CustomHeader from './components/CustomHeader';
-import Signup from './pages/auth/signup';
+import Signup from './pages/auth/Signup';
 import { isUserAdmin } from './utils/functions/is-user-admin.function';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
@@ -41,10 +41,10 @@ function App() {
                     path={ROUTES.ODDITIES.SIERPINSKI}
                     element={<SierpinksiTriangle />}
                   />
-                  <Route
+                  {/* <Route
                     path={ROUTES.ODDITIES.OTHER}
                     element={<OtherOddity />}
-                  />
+                  /> */}
                   <Route path={ROUTES.CONTACT} element={<Contact />} />
                   {isUserAdmin() && (
                     <Route

@@ -1,22 +1,29 @@
 import { useEffect, useState } from 'react';
 import DOMPurify from 'dompurify';
 import { fetchSierpinskiTriangleSVG } from '../../services/goServerService';
-import { ColorPicker, InputNumber } from 'antd';
+import { ColorPicker, InputNumber, Typography } from 'antd';
 import './Sierpinski.css';
 import Hero from '../../components/Hero';
 import { InfoCircleTwoTone } from '@ant-design/icons';
 import { colorAliases } from '../..';
 import { Color } from 'antd/es/color-picker';
+import './Oddities.css';
+import { useBackendHealthCheck } from '../../hooks/backend-health-check';
+import BackendUnavailable from '../../components/BackendUnavailable';
+const { Paragraph } = Typography;
 
 const CONTROL_ID = {
   iterationController: 'iterations',
   colorController: 'colors',
 };
 
+const BE_NOT_HEALTY_MSG = 'The Sierpinski triangle is a great little fractal. Learn more ';
+
 function SierpinksiTriangle() {
   const [svgData, setSvgData] = useState<string>('');
   const [depth, setDepth] = useState<number>(0);
   const [color, setColor] = useState<string>(colorAliases.lightGreen);
+  const isBEHealty = useBackendHealthCheck();
 
   const MIN_DEPTH = 0;
   const MAX_DEPTH = 10;
@@ -56,41 +63,52 @@ function SierpinksiTriangle() {
   };
 
   return (
-    <Hero>
-      <InfoCircleTwoTone
-        className="sierpinski-info-icon"
-        twoToneColor={colorAliases.lightGreen}
-      />
-      <div
-        className="Sierpinski-triangle-viewer"
-        dangerouslySetInnerHTML={{ __html: svgData }}
-      />
-      <div className="sierpinski-controls-container">
-        <div className="sierpinski-iterations-control">
-          <label htmlFor={CONTROL_ID.iterationController}>
-            Number of iterations
-          </label>
-          <InputNumber
-            id={CONTROL_ID.iterationController}
-            className="Sierpinski-input-number"
-            min={MIN_DEPTH}
-            max={MAX_DEPTH}
-            defaultValue={MIN_DEPTH}
-            onChange={onIterationChange}
-          />
-        </div>
-        <div className="sierpinski-color-control">
-          <label htmlFor={CONTROL_ID.colorController}>Pick a color!</label>
-          <div id={CONTROL_ID.colorController}>
-            <ColorPicker
-              onChangeComplete={onColorChange}
-              defaultValue={colorAliases.lightGreen}
-              size={'large'}
-            />
-          </div>
-        </div>
-      </div>
-    </Hero>
+    <div className='oddities-container'>
+      {isBEHealty ? 
+             <Hero>
+             <InfoCircleTwoTone
+               className="sierpinski-info-icon"
+               twoToneColor={colorAliases.lightGreen}
+             />
+             <div
+               className="Sierpinski-triangle-viewer"
+               dangerouslySetInnerHTML={{ __html: svgData }}
+             />
+             <div className="sierpinski-controls-container">
+               <div className="sierpinski-iterations-control">
+                 <label htmlFor={CONTROL_ID.iterationController}>
+                   Number of iterations
+                 </label>
+                 <InputNumber
+                   id={CONTROL_ID.iterationController}
+                   className="Sierpinski-input-number"
+                   min={MIN_DEPTH}
+                   max={MAX_DEPTH}
+                   defaultValue={MIN_DEPTH}
+                   onChange={onIterationChange}
+                 />
+               </div>
+               <div className="sierpinski-color-control">
+                 <label htmlFor={CONTROL_ID.colorController}>Pick a color!</label>
+                 <div id={CONTROL_ID.colorController}>
+                   <ColorPicker
+                     onChangeComplete={onColorChange}
+                     defaultValue={colorAliases.lightGreen}
+                     size={'large'}
+                   />
+                 </div>
+               </div>
+             </div>
+           </Hero>
+           : <BackendUnavailable>
+            <Paragraph>
+              {BE_NOT_HEALTY_MSG}
+              <a href='https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle'>on Wikipedia</a>
+            </Paragraph>
+           </BackendUnavailable>
+      }
+
+    </div>
   );
 }
 

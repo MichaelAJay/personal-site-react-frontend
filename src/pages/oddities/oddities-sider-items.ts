@@ -5,8 +5,8 @@ export const odditiesSiderItems: MenuProps['items'] = [
     label: 'Sierpinski Triangle',
     key: 'oddities/sierpinski',
   },
-  {
-    label: 'Other',
-    key: 'oddities/other',
-  },
+  // {
+  //   label: 'Other',
+  //   key: 'oddities/other',
+  // },
 ];
