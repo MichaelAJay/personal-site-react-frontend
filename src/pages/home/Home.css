@@ -1,0 +1,37 @@
+.home {
+  background-color: var(--testRed);
+}
+
+.home-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* position: absolute; */
+  top: 0;
+  z-index: 1;
+  display: block;
+}
+
+.home-proficiencies-bar {
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  /* aspect-ratio: 2 / 1; */
+  /* height: 50%; */
+  /* display: flex;
+   justify-content: space-between; */
+  z-index: 2;
+  background-color: var(--lightgreen);
+  padding: 20px 40px;
+}
+
+.section-red {
+  height: 500px;
+  background-color: var(--testRed);
+  scroll-margin-top: 64px;
+}
+
+.section-blue {
+  height: 500px;
+  background-color: var(--testBlue);
+}

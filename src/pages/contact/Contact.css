@@ -1,0 +1,38 @@
+.contact-container {
+  margin: 20px;
+  padding: 24px 50px 24px 24px;
+  background-color: var(--mountainlight);
+  border-radius: 10px;
+}
+
+.contact-content {
+  max-width: 60%;
+  flex: 1;
+  padding-right: 50px;
+}
+
+.contact-form-outer-container {
+  /* padding-left: 50px; */
+  flex: 1;
+  /* max-width: 30%; */
+}
+
+.contact-form-container {
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.alert-visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.alert-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}

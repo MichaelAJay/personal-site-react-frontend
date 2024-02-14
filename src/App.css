@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --treedarkgreen: #31474f;
+  /* --lightgreen: #a2b4a9; */
+  --lightgreen: 162, 180, 169;
+  --darkgreen: #32454c;
+  --sandbrown: #a8a58c;
+  --darksand: #aba58e;
+  --rockbrown: #6e7170;
+  --mountainlight: #fffbed;
+  --testRed: #ff0000;
+  --testBlue: #00f;
+  --olivegreen: #806e19;
+  --lightredsand: #e09367;
+  --lightoceanblue: #46675f;
+  --lightoceanbluelite: #46675f40;
+}
+
+.App-layout {
+  min-height: 100vh;
+}
+
+.app-layout-content {
+  background-color: var(--treedarkgreen);
+}

@@ -1,0 +1,11 @@
+.auth-container {
+    margin: 20px;
+    padding: 0 20px 20px 20px;
+    background-color: var(--mountainlight);
+    border-radius: 10px;
+    width: 60%;
+}
+
+.auth-form-container {
+    padding-top: 20px;
+}
