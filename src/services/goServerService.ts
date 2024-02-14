@@ -7,7 +7,7 @@ import { SignupForm } from './api/goServer/request/signup-form';
 
 const apiClient = axios.create({
   baseURL: ENV.apiUrl,
-  // withCredentials: true
+  withCredentials: true
 });
 
 export const fetchSierpinskiTriangleSVG = async (
