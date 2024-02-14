@@ -1,6 +1,6 @@
 .oddities-container {
     margin: 20px;
-    padding: 0 20px 20px 20px;
     background-color: var(--mountainlight);
     border-radius: 10px;
+    height: calc(100vh - 104px);
   }
