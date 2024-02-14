@@ -2,6 +2,7 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 import { Button, Flex, Tabs, TabsProps, Typography } from 'antd';
 import { useRef, useState } from 'react';
 import CustomModal from '../../components/CustomModal';
+import { useScrollToSectionOnHashChange } from '../../hooks/scroll-to-section-on-hash-change';
 import {
   AboutMe,
   aboutMePersonalAttributes,
@@ -41,6 +42,8 @@ const tabs: TabsProps['items'] = tabNames.map((tabName, index) => ({
 }));
 
 function InternalAbout() {
+  useScrollToSectionOnHashChange();
+
   const [isSkillsLegendModalOpen, setIsSkillsLegendModalOpen] = useState(false);
 
   const { modalOpen: modalVisible, modalData, hideModal } = useProgressBadge();
@@ -106,7 +109,7 @@ function InternalAbout() {
         />
       </Flex>
       {/* Skills */}
-      <div className="skills">
+      <div className="skills" id="skills">
         <Flex align="center" justify="space-between">
           <Title ref={skillsRef} level={3}>
             Technical Skills
