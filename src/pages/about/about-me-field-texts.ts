@@ -52,7 +52,7 @@ export const AboutMe = {
   professionalViewOfLLMs:
     'I have embraced the ascension of LLMs (ChatGPT in particular), and leverage them in my daily work. My skills have grown immeasurably since ChatGPT was released. While I am familiar with the frustration of not teasing a useful solution out of ChatGPT, I have also found quite elegant solutions in a timely manner, and always couple my take-aways with external sources.',
   professionalJourney:
-    'My favorite aspects of web application development are in the sphere of backend development.  I enjoy thinking through problems and implementing solutions to them.  As of early 2024, I\'ve started began working in earnest to gain some frontend skill. ,I find that I really enjoy the "back of the front end" aspect of front end development - that is, writing the JavaScript code necessary to make a web application function properly. I\'m learning to approach with patience the subject of styling.',
+    'My favorite aspects of web application development are in the sphere of backend development.  I enjoy thinking through problems and implementing solutions to them.  As of early 2024, I\'ve started working in earnest to gain some frontend skill. I find that I really enjoy the "back of the front end" aspect of front end development - that is, writing the JavaScript code necessary to make a web application function properly. I\'m learning to approach with patience the subject of styling.',
 };
 
 export const aboutMeInterests = [
@@ -67,7 +67,7 @@ export const aboutMeProfessionalAttributes = [
   'Logical problem-solver and decision-maker',
   'Confident solo worker and dependable teammate',
   'Effective technical communicator',
-  'Fast learner & Adept researcher',
+  'Fast learner & adept researcher',
 ];
 export const aboutMePersonalAttributes = [
   'Positive',

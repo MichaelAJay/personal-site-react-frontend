@@ -13,8 +13,6 @@ import {
 import {
   aboutSite,
   recognizedPlacesToImprove,
-  thingsIveLearned,
-  wips,
 } from './about-site-field-texts';
 import './About.css';
 import AboutSectionWithStandardList from './AboutSectionWithStandardList';
@@ -25,7 +23,7 @@ import {
 import SkillsDescriptionModalChildren from './SkillsDescriptionModalChildren';
 import SkillTabList from './SkillTabList';
 import SpecificSkillDescriptionModalChildren from './SpecificSkillDescriptionModalChildren';
-const { Title, Paragraph } = Typography;
+const { Title, Paragraph, Link } = Typography;
 
 const tabNames: Array<TabNames | 'All'> = [
   'Frontend Development',
@@ -128,24 +126,22 @@ function InternalAbout() {
       <div className="about-site-container">
         <Title level={2}>{aboutSite.title}</Title>
         <Paragraph>{aboutSite.brief}</Paragraph>
+        <Paragraph>
+          You can find the frontend repository <Link href='https://github.com/MichaelAJay/personal-site-react-frontend'>here</Link> and the backend repository <Link href='https://github.com/MichaelAJay/personal-site-go-backend'>here</Link>.
+        </Paragraph>
         <Paragraph>{aboutSite.p2}</Paragraph>
         <Paragraph>{aboutSite.p3}</Paragraph>
-        <Paragraph>{aboutSite.p4}</Paragraph>
-        <AboutSectionWithStandardList
-          level={3}
-          title="Things I've Learned"
-          dataSource={thingsIveLearned}
-        />
+        <Paragraph>
+          {aboutSite.p4}
+          <Link href='https://github.com/MichaelAJay/personal-site-react-frontend/blob/master/src/utils/functions/is-user-admin.function.ts'>here.</Link>
+        </Paragraph>
+        
         <AboutSectionWithStandardList
           level={3}
           title="Recognized Places to Improve"
           dataSource={recognizedPlacesToImprove}
         />
-        <AboutSectionWithStandardList
-          level={3}
-          title="Works in Progress"
-          dataSource={wips}
-        />
+        <Paragraph>{aboutSite.callForFeedback}</Paragraph>
         {/* Modals */}
         <CustomModal
           title="Skills Description"
@@ -180,7 +176,3 @@ export default function About() {
     </ProgressBadgeProvider>
   );
 }
-
-/**
- * Note:  I'm not sure if the context specific implementation should occur in About and be passed in to Inner...
- */
