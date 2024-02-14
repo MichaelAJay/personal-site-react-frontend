@@ -2,9 +2,10 @@ export const aboutSite = {
   title: 'About this Website',
   brief:
     "This website is intended to be an ever-improving display of my capabilities, especially as they relate to web application development.  It's my learning ground (especially for frontend development as well as Go development), a place for experimentation, and a place to showcase my current capabilities.",
-  p2: "Everything here - for better or for worse - has been created by me with the help of React & Ant Design. Also, I've leveraged ChatGPT significantly to help me build this.",
-  p3: `I'm pretty happy with how it's coming along, and I've learned a lot as I've built this site. I'm constantly striving for a better look, feel, and interaction, as well as dreaming up things to add - often simply for the sake of learning. Check the "Things I Like" section below for ... ADD STUFF HERE MICHAEL`,
-  p4: `I really like how I've split component semantics from their content.  As an example, this text (yes, THIS text!) is in a .ts file and is imported into the component, thus not distracting someone reading the code from the component itself.`,
+  p2: "This website is created using React & Ant Design on the frontend, and Go with Gin framework on the backend. Upfront, I'll mention that I know that it isn't responsive - that's coming, although I have quite a long TODO list between this website and some other projects. The frontend is deployed on GitHub Pages, and the backend is deployed using a Docker container and a Google Compute Engine VM.",
+  p3: `Check out the 'Oddities' section. Right now, there's a Sierpinski triangle viewer, which is the first meaningful code I wrote in Go.`,
+  p4: `Perhaps you see the Login button and say "Why?". Fair question - and one with no answer hwich provides a good reason to create an account and log in. I use it to authenticate and view messages from the application in the conditionally-rendered "Admin" tab. If you're interested, feel free to check out the utility function used for that conditional rendering `,
+  callForFeedback: `What do you think I could improve? I'm always open to constructive feedback - send me a message from the Contact section!`
 };
 
 export const thingsIveLearned = [
@@ -19,10 +20,9 @@ export const thingsILike = [
 ];
 
 export const recognizedPlacesToImprove = [
-  'Accessibility',
   'Responsive design',
-  'Simplicity',
-  'Naming - see above thoughts on splitting component semantics and their content',
+  'Accessibility',
+  'Technical Skills Search feature'
 ];
 
 export const wips = [
