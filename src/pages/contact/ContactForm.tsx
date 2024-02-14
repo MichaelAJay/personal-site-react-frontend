@@ -3,7 +3,7 @@ import { PostContactForm } from '../../services/api/goServer/request/post-contac
 import { postContactForm } from '../../services/goServerService';
 import './Contact.css';
 
-const MAX_MESSAGE_CHARS = 100;
+const MAX_MESSAGE_CHARS = 500;
 const DISABLED_FORM_TOOLTIP_MSG = 'My backend server is down, so the form is unavailable. Please reach out to me by email at michael.a.jay@protonmail.com.';
 
 function ContactForm({
