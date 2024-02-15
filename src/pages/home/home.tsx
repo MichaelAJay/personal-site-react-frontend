@@ -23,7 +23,7 @@ function Home() {
         <div>
           <img
             className="home-image"
-            src={`${process.env.PUBLIC_URL}/home-hero.png`}
+            src={`${process.env.PUBLIC_URL}/home-hero_mid.jpg`}
             alt="Surreal mountains scene"
           />
         </div>

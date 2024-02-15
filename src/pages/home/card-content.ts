@@ -27,7 +27,7 @@ export const CraftsmanshipCard: HomeSkillCardContent = {
 export const DedicationCard: HomeSkillCardContent = {
   title: 'Dedication',
   description:
-    'I am dedicated to my profession I am dedicated to my profession I am dedicated to my profession I am dedicated to my profession',
+    'I am dedicated to my profession and soon I\'ll tell you why!',
   imgAlt: 'Image of person with short hair working in fromt of a computer',
   imgSrc: '/dedication.png',
   sectionId: 'dedication',
